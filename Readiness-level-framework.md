@@ -7,11 +7,12 @@ Create a checklist that describes what we expect from virtual labs to exist at d
 - Check for secrets
 - We should also have a higher level notion of what we offer to the users.
 - See how viewpoints are important here.
+- Add a glossary with the most important concepts.
 
 **Roles**
 The following roles are involved in the development and use of a virtual lab:
-- A virtual lab technician / scientific software developer at LifeWatch VLIC
-- A virtual lab developer / person creating the content of the virutal lab
+- A virtual research environment engineer / scientific software developer at LifeWatch VLIC
+- A virtual lab developer / person creating the content of the virtual lab
 - A virtual lab user. 
     - A user can do the following:
         - Run the containerized model or pipeline
@@ -27,6 +28,7 @@ The following items can be present in a virtual lab:
 - Documentation
 - Model / data pipeline & Code
 - Containerized cells
+- Software management plan: Do we need a virtual lab to specify who is planning to upkeep the virtual lab?
 
 **Content description / metadata**
 - when written, 
@@ -46,6 +48,7 @@ The following items can be present in a virtual lab:
   - Secrets are secret.
   - Input and output variables of cells are documented (present in the comment block in the top of the cell).
   - Batch processing is applied where necessary.
+  - Versions are explicitly set to prevent compatibility problems.
   - Clean virtual lab
     - The architecture of the virtual lab is described (e.g. The is a flowchart showing the classes).
     - The responsibility of each cell in the notebook is clear.
@@ -72,6 +75,7 @@ The following items are quality checks for the documentation of the virtual lab 
     - It is clear what the ecological meaning of the parameter is.  
     - It is clear how to change these parameters.
 - How to use the virtual lab on a different dataset is clear.
+- Known potential pitfalls in using the virtual lab are described.
 
 **Readiness levels**
 A virtual lab can be in 6 stages. For each stage the requirements must apply and all requirements from the stages with lower numbers:
