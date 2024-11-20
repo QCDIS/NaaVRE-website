@@ -31,9 +31,9 @@ The following items can be present in a virtual lab:
 - Software management plan: Do we need a virtual lab to specify who is planning to upkeep the virtual lab?
 
 **Content description / metadata**
-- when written, 
-- where stored / published (Isn't this the same for all?)
-- tested by whom
+- Content: globally unique identifier, when written, where stored / published (Isn't this the same for all?), tested by whom
+- Findable by search engines: Metadata is consumed by search engines. See [fair software checklist](https://fairsoftwarechecklist.net/v0.2/).
+- Dependencies are specified.
 
 **Documentation**
 - Readme / user manual for the virtual lab: see user manual.
@@ -42,8 +42,12 @@ The following items can be present in a virtual lab:
      - Tutorial: This can simply be the existing default notebook with a description of the processes that occur during execution.
 
 **Model / data pipeline & Code**
+- Data
+  - FAIR: The data used in the virtual lab is FAIR data.  
 - Code 
   - Code is present: The code is present and accessible through a notebook. 
+  - The code has a version number.
+  - The code is available on a repository with version control (e.g. git).
   - Executes without errors: The code can be executed without errors.
   - Secrets are secret.
   - Input and output variables of cells are documented (present in the comment block in the top of the cell).
@@ -61,6 +65,7 @@ The following items can be present in a virtual lab:
     - Uncertainty analysis: Determine for outcomes how much they vary for various simulation runs. 
 
 **Containerized cells**
+- The notebook cells can be compiled.
 - The input and output of each cell is clear. It is both clear what the structure is (e.g. what data type is used) and what the data content is from a domain perspective. 
 - Run successfully: The containerized cells can run without any modifications.
 
