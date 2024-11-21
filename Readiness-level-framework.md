@@ -9,9 +9,13 @@ Create a checklist that describes what we expect from virtual labs to exist at d
 - See how viewpoints are important here.
 - Add a glossary with the most important concepts.
 
+### Aim
+The aim of the readiness level framework is to guide virtual lab developers and users. Virtual lab developers are recommended to strive to make their lab available as early as possible in the process, using a continuous development and continuous integration approach to improve the virtual lab and FAIRness of the virtual lab.
+
 ### User stories
 - As a scientist, I want to use a containerized cell that has been used by another scientists. How do I get exactly the same containerized cell? Even though the content of the virtual lab has changed?
   -  Should I use version control to see the notebook in the state it was when the Cell was containerized?
+- As a scientists, I want to see what changes are made in the databases that are used by the virtual lab. How do I do this?
 
 ### Roles
 The following roles are involved in the development and use of a virtual lab:
@@ -40,12 +44,13 @@ The following items can be present in a virtual lab:
   - [ToDo VLIC](#potential-todos-for-lifewatch-vlic): VLIC may need to enable detection by search engines. 
 - Dependencies are specified.
 - Is it possible to cite the virtual lab?
+- The metadata is stored outside NaaVRE and will remain available should NaaVRE become unavailable.
 
 ### Documentation
 - Readme / user manual for the virtual lab: see user manual.
 - Use cases:
      - Description of use cases: This can be a link to another source (website / publication)
-     - Tutorial: This can simply be the existing default notebook with a description of the processes that occur during execution.
+- Tutorial: At LifeWatch we stress the importance of training in transferring the knowledge needed to use a virtual lab. Virtual lab developers are strongly encouraged to create a tutorial for virtual labs early on in the development. This can simply be the existing default notebook with a description of the processes that occur during execution.
 
 ### Model / data pipeline & Code
 - Data
@@ -75,6 +80,7 @@ The following items can be present in a virtual lab:
 - The input and output of each cell is clear. It is both clear what the structure is (e.g. what data type is used) and what the data content is from a domain perspective. 
 - Run successfully: The containerized cells can run without any modifications.
 - Each containerized cell has a Guid and version number? (Is this going  to be maintainable?)
+- The performance is optimized.
 
 ### Common requirements
 - Of all documents the user can see what changes have been made.
@@ -88,6 +94,7 @@ The following items are quality checks for the documentation of the virtual lab 
     - It is clear how to change these parameters.
 - How to use the virtual lab on a different dataset is clear.
 - Known potential pitfalls in using the virtual lab are described.
+- By what standards is data exchanged with application programming interfaces or databases?
 
 ### Readiness levels
 A virtual lab can be in 6 stages. For each stage the requirements must apply and all requirements from the stages with lower numbers:
@@ -129,7 +136,8 @@ The lab exists. No further requirements.
     - Validation: The model has been validated and the validation method is documented.
 
 ### Sources
-- These recommendations are partially based on ideas presented in the [Fair software checklist](https://fairsoftwarechecklist.net/v0.2/).
+- These recommendations are partially based on ideas presented in the paper [Introducing the FAIR Principles for research software](https://www.nature.com/articles/s41597-022-01710-x) and the [Fair software checklist](https://fairsoftwarechecklist.net/v0.2/).
 
 ### Potential ToDos for LifeWatch VLIC
 - Findable by search engines
+- Software management plan: Shall we focus on getting a maturity level framework which mentions a software management plan, and work out the details of what should be in the software management plan later?
