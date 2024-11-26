@@ -6,7 +6,7 @@ Version 1.0.0
 Published <span style="color:green">current date</span>
 
 The aim of this readiness level framework is to guide virtual lab developers by giving recommendations of what to include in their virtual lab and what to prioritize. 
-The document first describes the content of virtual labs in NaaVRE and roles to create a common viewpoint of the software and the users.
+The document first describes the content of virtual labs in [NaaVRE](https://naavre.net/) and roles to create a common viewpoint of the software and the users.
 Next it describes six readiness levels in which the virtual lab can be. It then proceeds with checklists that guide
 virtual lab creators to get their virtual lab to the next readiness level.
 
@@ -22,23 +22,34 @@ Besides assets, we encourage the creator of a virtual lab to support the usabili
 
 Currently, NaavRE is mostly used for scientific Workflows e.g. data processing, data analysis, and simulation. 
 
-### Roles  
-People with different roles will be interacting in different ways with the virtual lab. We discern the following roles for people who interact with a virtual lab:
-- A virtual research environment developer / NaaVRE developer working at LifeWatch VLIC.
-- A virtual lab developer / person creating the content of the virtual lab. This document is aimed to be a guideline for people with this role.
-- A virtual lab user. A virtual lab user can be a domain scientist or policy maker.
-  - Domain scientists: Uses the virtual lab in their research. Domain scientists are expected to have at least some coding experience.
-    - Depending on what stage the lab is in, we discern two types of domain scientists:
-      - Golden user: Enters the virtual lab in an early stage of development. The use case of the golden user requires changes to the virtual lab. They will co-develop the virtual lab together with the virtual research environment developer.
-      - General user: This user enters the virtual lab when it is finished enough for the domain scientists to use the virtual lab on their own.
-  - Policymaker: Uses the virtual lab to run a scenario to get information that is used in making decisions. Policymakers are expected to not make changes to the code.
+### Virtual lab contributions
+NaaVRE aims to be a virtual research environment that enables people with expertise in computational ecology or ecological data analysis,
+to create of virtual labs in which users can conduct their research.
+Our platform aims at obtaining the following contributions  to enable innovative research methods:
+- Virtual research environment development and operations: Creating and maintaining the software in which virtual labs can be created. This is done by LifeWatch.
+- Virtual lab core development: The creation of a new virtual lab in NaaVRE. Virtual lab core development is done in a 
+co-development process with the DevOps engineers at LifeWatch. 
+- Virtual lab development: In personal instances of existing virtual labs users can change the source code to suit their needs.
+- Virtual lab use. Researchers couple virtual labs assets, use their own datasets, and set their own parameters to run their own experiments.
+
+In the virtual labs the distinction between development and use is a continuum. How many changes a scientist 
+will make to the source code depends on whether the virtual lab already has the necessary assets for the user.
+
+#### Wetlab analogy
+If we compare the development of a virtual research environment to the construction of a wetlab, 
+the virtual research environment development and operations is the same phase as the construction of a building and rooms that house the wetlabs. 
+The core development of a virtual lab would be the same phase as the installation and calibration of the wetlab equipment. 
+In order to get the power supply, water supply, ventilation, and drainage pipes in the right locations in the lab,
+the equipment installers and construction workers need to coordinate their efforts, like co-development is done for the virtual lab.
+Once a lab is finished, the doors of the lab open for researchers to use the equipment in the lab to do their research. 
+They can also create custom settings on the lab equipment to suit their needs, likewise a NaaVRE user could do development to change the source code to suit their own research.
 
 ### Readiness levels
 We discern six readiness levels in the development of a virtual lab. A new virtual lab starts at level 1.
 
-1. Development: The lab is being developed by the virtual lab developer(s).
-2. Testing: On request of the virtual lab developer(s) others who were not involved in the development of this specific virtual lab, can review the virtual lab and do suggestions.
-3. Golden use: A scientist can co-develop the lab further with the virtual research environment developers to apply it to their own research question and publish the results.
+1. Core Development: Core development of the virtual is taking place.
+2. Testing: On request of the virtual lab core developer(s) others who were not involved in the development of this specific virtual lab, can review the virtual lab and do suggestions.
+3. Golden use: A scientist, who can also be a core developer, can co-develop the lab further with the virtual research environment developers to apply it to their own research question and publish the results.
 4. Workshop: The lab can be used by multiple workshop participants under the guidance of an instructor that can point out what the user can safely change and can not change in the lab. 
 5. General use: Any ecologist can use the lab for their research. 
 6. Policymaker use: The model or pipeline has been verified and validated and outcomes can be used to give policy advise.
@@ -75,7 +86,7 @@ For the assets the following checklists describe what a virtual lab would ideall
 - The notebook cells can be containerized. [2]
 - The containerized cells can run without any modifications. [2]
 - The input and output of each cell is clear. It is both clear what the structure is (e.g. what data type is used) and what the data content is from a domain perspective. [3]
-- Each containerized cell has a Guid and version number <span style="color:green">(This is currently not a feature in NaaVRE. But might become possible in the future. Added to [potential ToDos](#potential-todos-for-lifewatch-vlic))</span> [4]
+- Each containerized cell has a persistent identifier and version number <span style="color:green">(This is currently not a feature in NaaVRE. But might become possible in the future. Added to [potential ToDos](#potential-todos-for-lifewatch-vlic))</span> [4]
 - The duration of computation, memory usage, and power usage of the container is acceptable. As there is currently no dashboard to monitor resource usage, contact the VLIC team for guidelines. [4]
 - The containerized cells and workflow are interoperable with other systems. <span style="color:green">(Is this something that should be possible using the "Export" button in the experiment manager. Does this always result in an exception? Tried looking into the documentation: https://naavre.net/docs/tutorials/#compose-a-workflow , but didn't find it.)</span> [6]
 - Validation [6]
@@ -87,7 +98,7 @@ Besides creating assets, virtual lab creators are encouraged to create documenta
 
 ### Metadata
 - We encourage creating metadata which at least has the following content: [3] 
-  - A globally unique identifier (Guid). 
+  - A persistent identifier. 
   - A first publication date.
   - A last modification date.
   - Where the virtual lab is stored / published <span style="color:green">(Isn't this the same for all virtual labs?)</span>. 
@@ -127,7 +138,7 @@ The following guidelines can be used to determine the completeness of a user man
 
 ## Potential ToDos for LifeWatch VLIC
 - Create a way to make the virtual lab findable by search engines. See [Metadata](#Metadata).
-- Make NaaVRE generate a Guid and version number for containerized cells. See [Containerized cells and Workflow](#containerized-cells-and-workflow).
+- Make NaaVRE generate a persistent identifier and version number for containerized cells. See [Containerized cells and Workflow](#containerized-cells-and-workflow).
 - Software management plan: Shall we focus on getting a readiness level framework which mentions a software management plan, and work out the details of what should be in the [software management plan](https://zenodo.org/records/7248877) later?
 
 ## Feedback
