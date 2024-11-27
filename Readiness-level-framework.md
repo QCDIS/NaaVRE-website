@@ -11,8 +11,8 @@ Next it describes six readiness levels in which the virtual lab can be. It then 
 virtual lab creators to get their virtual lab to the next readiness level.
 
 ### Content of a virtual lab
-A virtual lab in NaaVRE can contain two types of assets:
-- [Source code](#Source-code).
+A virtual lab can contain two types of assets:
+- [The codebase](#Codebase).
 - [Containerized cells and workflow](#containerized-cells-and-workflow).    
 
 Besides assets, we encourage the creator of a virtual lab to support the usability of the assets, by creating the following documents:
@@ -23,14 +23,20 @@ Besides assets, we encourage the creator of a virtual lab to support the usabili
 Currently, NaavRE is mostly used for scientific Workflows e.g. data processing, data analysis, and simulation. 
 
 ### Virtual lab contributions
-NaaVRE aims to be a virtual research environment that enables people with expertise in computational ecology or ecological data analysis,
+NaaVRE aims to be a virtual research environment (VRE) that enables people with expertise in computational ecology or ecological data analysis,
 to create of virtual labs in which users can conduct their research.
 Our platform aims at obtaining the following contributions  to enable innovative research methods:
-- Virtual research environment development and operations: Creating and maintaining the software in which virtual labs can be created. This is done by LifeWatch.
+- Virtual research environment (VRE) development and operations: Creating and maintaining the software in which virtual labs can be created. This is done by LifeWatch.
 - Virtual lab core development: The creation of a new virtual lab in NaaVRE. Virtual lab core development is done in a 
 co-development process with the DevOps engineers at LifeWatch. 
+- Virtual lab code review: During core development feedback can be provided on the user-friendliness, maintainability, and robustness of the
+source code, the assets and the base image. We recommend starting on testing as early on in the development process, as this may contribute to a clear architecture, and good code quality.
+- Virtual lab quality assurance: If core developers and reviewers believe the virtual lab to be ready to be used by others,
+people who were not involved in the development of the virtual lab, can try out the virtual lab with a fresh pair of eyes and do suggestions.
 - Virtual lab development: In personal instances of existing virtual labs users can change the source code to suit their needs.
-- Virtual lab use. Researchers couple virtual labs assets, use their own datasets, and set their own parameters to run their own experiments.
+- Virtual lab use: Researchers couple virtual labs assets, use their own datasets, and set their own parameters to run their own experiments.
+  - Golden use: Using a new virtual lab for the first publication based on findings produced in that virtual lab. This will often be done by the team involved in the core development.
+  When done by people who are not involved in the core development, golden use will be done in co-development with the VRE development and operations team.
 
 In the virtual labs the distinction between development and use is a continuum. How many changes a scientist 
 will make to the source code depends on whether the virtual lab already has the necessary assets for the user.
@@ -47,12 +53,20 @@ They can also create custom settings on the lab equipment to suit their needs, l
 ### Readiness levels
 We discern six readiness levels in the development of a virtual lab. A new virtual lab starts at level 1.
 
-1. Core Development: Core development of the virtual is taking place.
-2. Testing: On request of the virtual lab core developer(s) others who were not involved in the development of this specific virtual lab, can review the virtual lab and do suggestions.
-3. Golden use: A scientist, who can also be a core developer, can co-develop the lab further with the virtual research environment developers to apply it to their own research question and publish the results.
-4. Workshop: The lab can be used by multiple workshop participants under the guidance of an instructor that can point out what the user can safely change and can not change in the lab. 
-5. General use: Any ecologist can use the lab for their research. 
-6. Policymaker use: The model or pipeline has been verified and validated and outcomes can be used to give policy advise.
+1. Core Development: Core development of the virtual lab is taking place in co-development with the Lifewatch team.
+2. First use: The first person not involved in the core development of the virtual lab can start using the virtual lab.
+This user will receive support from the Lifewatch (VRE) development and operations team. This is the stage in which the lab is
+considered ready enough to support a golden use case.
+3. Workshop: The lab can be used by multiple workshop participants under the guidance of an instructor that can point out what the user can safely change and can not change in the lab. 
+4. General use: Any ecologist can use their own instance of the lab for their research. 
+5. Policymaker use: The model or pipeline has been verified and validated and outcomes can be used to give policy advise.
+
+#### What if the golden user is a core developer?
+In the case where the golden user is also a core developer, there will be less priority given to the usability of the virtual lab for others
+as the primary concern of the core developers will be to create a virtual lab that meets their needs to do their research.
+In this case having code reviews and quality assurance is still recommended to increase the maintainability of the code for
+future use, regardless of whether the lab will be used by the same researchers, other researchers from the same research group,
+or researchers from other institutions.
 
 For the content of the virtual lab, the following checklists provide guidelines of what to keep in mind during the development 
 and what requirements the virtual lab should meet at different levels of readiness. For each stage the requirements from 
@@ -60,10 +74,19 @@ the stages with lower numbers apply as well. The numbers between brackets (e.g. 
 the guideline should be implemented before proceeding with the actions associated with the readiness level. We recommend 
 the virtual lab developer to repeat checking the guidelines in this document for each cycle of changes made to an existing virtual lab.
 
-## Assets
-For the assets the following checklists describe what a virtual lab would ideally comply to:
 
-### Source code
+|          |  |  |            | Readiness level |
+|----------|--|--|------------|-----------------|
+| Codebase |  |  |            |                 |
+|          |  |  |            |                 |
+|          |  |  |            |                 |
+|          ||| Next level | 1               | |
+
+## Assets
+For the assets the following checklists describe what a virtual lab would ideally comply to: 
+
+### Codebase
+- Version pinned dependencies: Versions of used software and libraries are pinned to prevent compatibility problems when updates occur. [1] 
 - Only FAIR data is used in the virtual lab. [3]  
 - Source code: i.e. Notebooks and other code files included in the virtual lab.
   - Secrets are secret: Personal tokens for APIs do not end up in version control when a user fills them in. [2] <span style="color:green"> I am now assuming we can easily make this happen by creating a .env file in the jupyter lab, adding an ignore rule to Gitignore for this file and instructing users to reference this file whenever using secrets? IN that case I should make a tutorial for this. </span>
@@ -76,7 +99,6 @@ For the assets the following checklists describe what a virtual lab would ideall
     - The code is available on a repository with version control (e.g. git). [2]
       - The version control tool allows others to suggest changes. [3]
     - The code has a version number. [3]
-    - Versions of used software and libraries are explicitly set to prevent compatibility problems. [5]
   - [Parallel processing](https://github.com/QCDIS/lifewatch-notebooks/blob/main/NaaVRE-tutorials/splitting-classic.ipynb) is applied where suitable. [3]
   - Unit tests: Notebook cells, and methods have unit tests to document their behavior. [4]
   - There is a description of the architecture of the virtual lab (e.g. There is a flowchart showing the notebook cells and classes). [5]
