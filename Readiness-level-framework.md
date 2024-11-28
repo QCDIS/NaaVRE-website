@@ -11,13 +11,17 @@ Next it describes six readiness levels in which the virtual lab can be. It then 
 virtual lab creators to get their virtual lab to the next readiness level.
 
 ### Content of a virtual lab
-A virtual lab can contain two types of assets:
-- [The codebase](#Codebase).
-- [Containerized cells and workflow](#containerized-cells-and-workflow).    
+A virtual lab can contain four types of assets <span style="color:green">(Should we choose between the terms: resource & asset? Nanohub uses “resource”. Maybe we should discuss this with domain scientists)</span>:
+- The codebase: 
+  - Source code: Any code that is written for the virtual lab.
+  - Dependencies: The libraries, software, and compiled simulation code used in the virtual lab.
+- Base image: The software, and packages the source code in the  virtual lab.
+- Data: <span style="color:green">What do we consider to be the role of datasets in the NaaVRE virtual lab? Data will be produced by processing, analysis, and simulations, but do we want to store these internally? </span>
+- Containerized cells and workflow.    
 
 Besides assets, we encourage the creator of a virtual lab to support the usability of the assets, by creating the following documents:
-- [Metadata](#Metadata).
-- [Documentation](#Documentation), including a tutorial.
+- Metadata.
+- Documentation, including a tutorial.
 - Software management plan <span style="color:green">(Do we need a virtual lab to specify who is planning to upkeep the virtual lab? Shall we focus on getting a readiness level framework which mentions a software management plan, and work out the details of what should be in the software management plan later? I think a software management plan belongs to a readiness level which no lab will currently reach.)</span>
 
 Currently, NaavRE is mostly used for scientific Workflows e.g. data processing, data analysis, and simulation. 
@@ -34,7 +38,7 @@ source code, the assets and the base image. We recommend starting with reviews a
 - Virtual lab quality assurance: If core developers and reviewers believe the virtual lab to be ready to be used by others,
 people who were not involved in the development of the virtual lab, can try out the virtual lab with a fresh pair of eyes and do suggestions.
 Quality assurance can help the core development team identify issues arising when others start using the virtual lab.
-Therefore it is good to do quality assurance before others who are not in the same institute as the core developers start using the virtual lab.
+Therefore, it is good to do quality assurance before others who are not in the same institute as the core developers start using the virtual lab.
 - Virtual lab development: In personal instances of existing virtual labs users can change the source code to suit their needs.
 - Virtual lab use: Researchers couple virtual labs assets, use their own datasets, and set their own parameters to run their own experiments.
   - Golden use case: Using a new virtual lab for the first publication based on findings produced in that virtual lab. This will often be done by the team involved in the core development.
@@ -71,7 +75,7 @@ In this case having code reviews and quality assurance is still recommended to i
 future use, regardless of whether the lab will be used by the same researchers, other researchers from the same research group,
 or researchers from other institutions.
 
-#### Readiness level chaecklist
+#### Readiness level checklist
 For the content of the virtual lab, the following checklist provides a guideline of what to keep in mind during the development 
 and what requirements the virtual lab should meet at different levels of readiness. For each stage the requirements from 
 the stages with lower numbers apply as well. If a criterion should be met at readiness level 2, the criterion should be implemented before proceeding with the actions associated with readiness level 2. 
@@ -81,11 +85,11 @@ We also recommend the virtual lab developer to repeat checking the guidelines in
 |                                  |                   |                                  | 1 | 2 | 3 | 4 | 5 |                                                                                                                                                                                                                                                                                                                                                                                                |
 |----------------------------------|-------------------|----------------------------------|---|---|---|---|---|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Versioning                       | Version number    |                                  |   | X |   |   |   | There is a version number for the whole virtual lab.                                                                                                                                                                                                                                                                                                                                           |
+| Dependencies                     | Versions          | Pinned                           | X |   |   |   |   | In the dependencies versions of used software and libraries are pinned to prevent compatibility problems when updates occur to the packages and software.                                                                                                                                                                                                                                      |
 | Codebase                         |                   |                                  |   |   |   |   |   |                                                                                                                                                                                                                                                                                                                                                                                                |
-|                                  | Dependencies      | Version pinning                  | X |   |   |   |   | In the dependencies versions of used software and libraries are pinned to prevent compatibility problems when updates occur to the packages and software.                                                                                                                                                                                                                                      |
 |                                  | Data              | FAIR                             |   | X |   |   |   | Only FAIR data is used in the virtual lab.                                                                                                                                                                                                                                                                                                                                                     
 |                                  | Source code       |                                  |   |   |   |   |   | i.e. Notebooks and other code files included in the virtual lab.                                                                                                                                                                                                                                                                                                                               
-|                                  |                   | Secrets are secret               |   | X |   |   |   | Personal tokens for APIs do not end up in version control when a user fills them in. [2] <span style="color:green"> I am now assuming we can easily make this happen by creating a .env file in the jupyter lab, adding an ignore rule to Gitignore for this file and instructing users to reference this file whenever using secrets? In that case I should make a tutorial for this. </span> 
+|                                  |                   | Secrets are secret               |   | X |   |   |   | Personal tokens for APIs do not end up in version control when a user fills them in. ToDo Vlic: Guideline for secret management https://github.com/QCDIS/projects_overview/issues/276 
 |                                  |                   | Notebook cells have titles       | X |   |   |   |   | Each cell in the notebooks starts with a title.                                                                                                                                                                                                                                                                                                                                                | 
 |                                  |                   | Executes without errors          |   | X |   |   |   | The code can be executed without errors: Currently, you can verify this by manually executing all cells in the notebook on a machine on which the code was not developed (to ensure no references are made to local resources).                                                                                                                                                                |
 |                                  |                   | Version control                  | X |   |   |   |   | The code is available on a repository with version control (e.g. git). The version control tool allows others to suggest changes.                                                                                                                                                                                                                                                              |
@@ -138,6 +142,8 @@ The following guidelines can be used to determine the completeness of a user man
 - Make NaaVRE generate a persistent identifier and version number for containerized cells. See [Containerized cells and Workflow](#containerized-cells-and-workflow).
 - Software management plan: Shall we focus on getting a readiness level framework which mentions a software management plan, and work out the details of what should be in the [software management plan](https://zenodo.org/records/7248877) later?
 - Choose a metadata standard for Virtual labs.  https://github.com/QCDIS/projects_overview/issues/275
+- Create recommendations for testing: https://github.com/QCDIS/projects_overview/issues/274
+- Guideline for secret management https://github.com/QCDIS/projects_overview/issues/276
 
 ## Feedback
 Any feedback on this document is appreciated. Please contact the LifeWatch VLIC team if you have any questions or comments on the document.
