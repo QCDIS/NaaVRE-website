@@ -37,7 +37,7 @@ Quality assurance can help the core development team identify issues arising whe
 Therefore it is good to do quality assurance before others who are not in the same institute as the core developers start using the virtual lab.
 - Virtual lab development: In personal instances of existing virtual labs users can change the source code to suit their needs.
 - Virtual lab use: Researchers couple virtual labs assets, use their own datasets, and set their own parameters to run their own experiments.
-  - Golden use: Using a new virtual lab for the first publication based on findings produced in that virtual lab. This will often be done by the team involved in the core development.
+  - Golden use case: Using a new virtual lab for the first publication based on findings produced in that virtual lab. This will often be done by the team involved in the core development.
   When done by people who are not involved in the core development, golden use will be done in co-development with the VRE development and operations team.
 
 In the virtual labs the distinction between development and use is a continuum. How many changes a scientist 
@@ -53,14 +53,15 @@ Once a lab is finished, the doors of the lab open for researchers to use the equ
 They can also create custom settings on the lab equipment to suit their needs, likewise a NaaVRE user could do development to change the source code to suit their own research.
 
 ### Readiness levels
-We discern six readiness levels in the development of a virtual lab. A new virtual lab starts at level 1.
+We discern five readiness levels in the development of a virtual lab. A new virtual lab starts at level 1.
+Each higher readiness level improvements should be made to the assets and documents in order to make the lab usable by others with an increasing amount of independence from the virtual lab core developers and VRE development team.
 
 1. Core Development: Core development of the virtual lab is taking place in co-development with the Lifewatch team.
 2. First use: The first person not involved in the core development of the virtual lab can start using the virtual lab.
 This user will receive support from the Lifewatch (VRE) development and operations team. This is the stage in which the lab is
 considered ready enough to support a golden use case. Quality assurance can indicate that the lab is ready for its first use.
 3. Workshop: The lab can be used by multiple workshop participants under the guidance of an instructor that can point out what the user can safely change and can not change in the lab. 
-4. General use: Any ecologist can use their own instance of the lab for their research. 
+4. General use: Any ecologist can use their own instance of the lab for their research. No more support is needed to work in the lab. Any problems arising should be treated as bugs.
 5. Policymaker use: The model or pipeline has been verified and validated and outcomes can be used to give policy advise.
 
 #### What if the golden user is a core developer?
@@ -70,13 +71,12 @@ In this case having code reviews and quality assurance is still recommended to i
 future use, regardless of whether the lab will be used by the same researchers, other researchers from the same research group,
 or researchers from other institutions.
 
-For the content of the virtual lab, the following checklists provide guidelines of what to keep in mind during the development 
+#### Readiness level chaecklist
+For the content of the virtual lab, the following checklist provides a guideline of what to keep in mind during the development 
 and what requirements the virtual lab should meet at different levels of readiness. For each stage the requirements from 
-the stages with lower numbers apply as well. The numbers between brackets (e.g. "[1]") indicate at which readiness level 
-the guideline should be implemented before proceeding with the actions associated with the readiness level. We recommend 
-the virtual lab developer to repeat checking the guidelines in this document for each cycle of changes made to an existing virtual lab.
-
-(Ideally both the team doing core development and the team doing quality assurance agree that the items in the following checklist have been met at the relevant readiness level)
+the stages with lower numbers apply as well. If a criterion should be met at readiness level 2, the criterion should be implemented before proceeding with the actions associated with readiness level 2. 
+Ideally both the team doing core development and the team doing quality assurance agree that the items in the following checklist have been met at the relevant readiness level.
+We also recommend the virtual lab developer to repeat checking the guidelines in this document for each cycle of changes made to an existing virtual lab.
 
 |                                  |                   |                                  | 1 | 2 | 3 | 4 | 5 |                                                                                                                                                                                                                                                                                                                                                                                                |
 |----------------------------------|-------------------|----------------------------------|---|---|---|---|---|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -118,9 +118,8 @@ the virtual lab developer to repeat checking the guidelines in this document for
 |                                  | Use case          | Are described                    |   |   | X |   |   | There is a description of use cases. This can be a link to another source (website / publication).                                                                                                                                                                                                                                                                                             |
 
 #### User manual
-The following guidelines can be used to determine the completeness of a user manual. 
-- Storage location: <span style="color:green"> ToDO: SPecifcy where to store </span>
-- What happens in the workflow is explained from the following viewpoints:
+The following guidelines can be used to determine the completeness of a user manual.
+- The virtual lab is explained from the following viewpoints:
   - A conceptual viewpoint. There is an intuitive description of what happens.
   - A mathematical viewpoint. How the real world system relates to the used mathematical algorithm is clear.
 - The parameters are clear.
@@ -130,6 +129,7 @@ The following guidelines can be used to determine the completeness of a user man
   - The tutorial can be done without supervision.
 - Known potential pitfalls in using the virtual lab are described.
 - There is a description of the standards used for data exchange with application programming interfaces and databases.
+- Storage location: The description of the virtual lab from an conceptual and mathematical viewpoint is stored on [NaaVRE.net](https://naavre.net/). 
 
 ## Sources
 - These recommendations are partially based on ideas presented in the paper [Introducing the FAIR Principles for research software](https://www.nature.com/articles/s41597-022-01710-x), the [Fair software checklist](https://fairsoftwarechecklist.net/v0.2/), and [fair-software.eu](https://fair-software.eu/recommendations/license).
