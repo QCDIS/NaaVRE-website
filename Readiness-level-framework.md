@@ -72,8 +72,7 @@ For each higher readiness level improvements should be made to the assets and do
 This user will receive support from the Lifewatch (VRE) development and operations team. This is the stage in which the lab is
 considered ready enough to support a golden use case. Quality assurance can indicate that the lab is ready for its first use.
 3. Workshop: The lab can be used by multiple workshop participants under the guidance of an instructor that can point out what the user can safely change and can not change in the lab. 
-4. General use: Any ecologist can use their own instance of the lab for their research. No more support is needed to work in the lab. Any problems arising should be treated as bugs.
-5. Policymaker use: The model or pipeline has been verified and validated and outcomes can be used to give policy advise.
+4. Operational service: Any ecologist can use their own instance of the lab for their research. No more support is needed to work in the lab. Any problems arising should be treated as bugs.
 
 #### What if the golden user is a core developer?
 In the case where the golden user is also a core developer, there will be less priority given to the usability of the virtual lab for others
