@@ -26,26 +26,28 @@ Besides assets, we encourage the creators of a virtual lab to support the usabil
 
 Currently, NaavRE is mostly used for scientific Workflows e.g. data processing, data analysis, and simulation. <span style="color:green">Integrate this sentence in the story.</span>  
 
-### Virtual lab contributions
-<span style="color:green">currently missing contributions from cloud researchers and students</span>  
+### Virtual lab roles
 NaaVRE aims to be a virtual research environment (VRE) that enables experts in computational ecology and ecological data analysis
 to create virtual labs in which users conduct their research.
-Our platform aims to receive the following contributions  to enable innovative research methods:
-- Virtual research environment (VRE) development and operations: Creating and maintaining the software in which virtual labs can be created. This is done by DevOps engineers from LifeWatch.
-- Virtual lab core development: The creation of a new virtual lab in NaaVRE. Virtual lab core development is done in a 
-co-development process with the DevOps engineers at LifeWatch. 
-- Virtual lab code review: Feedback can be provided during core development on the user-friendliness, maintainability, and robustness of the
+Our platform needs contributions from multiple roles to enable innovative research methods:
+- Virtual research environment (VRE) development and operations engineer: Creating and maintaining NaaVRE the software in which virtual labs can be created. This is done by LifeWatch.
+- Virtual lab core developer: Creates a new virtual lab in NaaVRE. Virtual lab core development is done in a co-development process with the DevOps engineers at LifeWatch. 
+- Virtual lab code reviewer: Provides feedback during core development on the user-friendliness, maintainability, and robustness of the
 source code and other assets. We recommend starting with reviews as early on in the development process, as this may contribute to a clear architecture, and good code quality.
-- Virtual lab quality assurance: If core developers and reviewers believe the virtual lab to be ready to be used by others,
+- Virtual lab quality assurance engineer: If core developers and reviewers believe the virtual lab to be ready to be used by others,
 people who were not involved in the development of the virtual lab, can try out the virtual lab with a fresh pair of eyes and do suggestions.
 Quality assurance can help the core development team identify issues arising when others start using the virtual lab.
 Therefore, it is good to do quality assurance before others who are not in the same institute as the core developers start using the virtual lab.
-- Virtual lab development: Once a virtual lab has reached a stage in which it can be used by others, users can expand and adapt the source code to suit their needs.
-- Virtual lab use: Researchers couple virtual labs assets, use their own datasets, and set their own parameters to run their own experiments in the virtual lab.
-  - Golden use case: Using a new virtual lab for the first publication based on findings produced in that virtual lab. This will often be done by the team involved in the core development.
-  When done by people who are not involved in the core development, golden use will be done in co-development with the VRE development and operations team.
+- Virtual lab developer: Once a virtual lab has reached a stage in which it can be used by others, users can expand and adapt the source code to suit their needs.
+- Virtual lab user: Researchers couple virtual labs assets, use their own datasets, and set their own parameters to run their own experiments in the virtual lab.
+  - Golden user: 
+- Virtual lab visitor: Visits the virtual lab to see how experiments were done.
+- Virtual lab owner / Principal investigator: Coordinates the further development of the VL with a scientific vision. Will initially be the golden user
+who initiates the construction of a new virtual lab to do experiments and create a first publication based. This will often be done by the team involved in the core development.
+- Virtual lab Technical coordinator: Knows the lab from a technical perspective. Pushes the lab to the next readiness level. Works at VLIC.
+- Virtual lab Service operations: Can support users. Knows the lab and can help out when problems arise.
 
-In the virtual labs the distinction between development and use is a continuum. How many changes a scientist 
+A person can fulfill multiple roles. In the virtual labs the distinction between development and use is a continuum. How many changes a scientist 
 will make to the codebase and libraries depends on whether the virtual lab already has the necessary assets for the user.
 
 #### Wetlab analogy
@@ -56,6 +58,10 @@ In order to get the power supply, water supply, ventilation, and drainage pipes 
 the equipment installers and construction workers need to coordinate their efforts, like co-development is done for the virtual lab.
 Once a lab is finished, the doors of the lab open for researchers to use the equipment in the lab to do their research. 
 They can also create custom settings on the lab equipment to suit their needs, likewise a NaaVRE user could do development to change the source code to suit their own research.
+
+### Responsibilities
+#### VRE development and operations engineer
+- Implement developments from cloud researches and thesis students into NaaVRE.
 
 ### Readiness levels
 We discern five readiness levels in the development of a virtual lab. A new virtual lab starts at level 1.
