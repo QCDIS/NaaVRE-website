@@ -9,7 +9,7 @@ Published <span style="color:green">current date</span>
 The aim of this readiness level framework is to guide virtual lab developers by giving recommendations of what to include in their virtual lab and what to prioritize. 
 The document first describes the content of virtual labs in [NaaVRE](https://naavre.net/) and contributions that can be made 
 to create a common viewpoint of the software and the users.
-Next it describes five readiness levels in which the virtual lab can be. It then proceeds with checklists that guide
+Next it describes four readiness levels in which the virtual lab can be. It then proceeds with checklists that guide
 virtual lab creators to get their virtual lab to the next readiness level.
 
 ### Content of a virtual lab
@@ -55,15 +55,22 @@ will make to the codebase and libraries depends on whether the virtual lab alrea
 - Implement developments from cloud researches and thesis students into NaaVRE.
 
 ### Readiness levels
-We discern five readiness levels in the development of a virtual lab. A new virtual lab starts at level 1.
+We discern four readiness levels in the development of a virtual lab. A new virtual lab starts at level 1.
 For each higher readiness level improvements should be made to the assets and documents in order to make the lab usable by others with an increasing amount of independence from the virtual lab core developers and VRE DevOps team.
 
 1. Core Development: Core development of the virtual lab is taking place in co-development with the Lifewatch VRE development and operations team.
 2. First use: The first person not involved in the core development of the virtual lab can start using the virtual lab.
 This user will receive support from the Lifewatch (VRE) development and operations team. This is the stage in which the lab is
 considered ready enough to support a golden use case. Quality assurance can indicate that the lab is ready for its first use.
-3. Workshop: The lab can be used by multiple workshop participants under the guidance of an instructor that can point out what the user can safely change and can not change in the lab. 
+3. Workshop use: The lab can be used by multiple workshop participants under the guidance of an instructor that can point out what the user can safely change and can not change in the lab. 
 4. Operational service: Any ecologist can use their own instance of the lab for their research. No more support is needed to work in the lab. Any problems arising should be treated as bugs.
+
+Whenever users of the virtual lab come up with a new idea that does not fit in the possibilities of the virtual lab they are using, 
+they can contact LifeWatch to discuss the possibilities of creating a new virtual lab.
+
+![ NaaVRE_development_cycle.png not found](NaaVRE_development_cycle.png)  
+The virtual lab moves through the readiness levels, from core development to operational service. Users coming up with ideas for new experiments that do not fit in the virtual lab, 
+can, in collaboration with LifeWatch, create a new virtual lab that fits their needs.
 
 #### What if the golden user is a core developer?
 In the case where the golden user is also a core developer, there will be less priority given to the usability of the virtual lab for others
