@@ -45,7 +45,7 @@ Therefore, it is good to do quality assurance before others who are not in the s
 - Virtual lab owner / Principal investigator: Coordinates the further development of the VL with a scientific vision. Will initially be the golden user
 who initiates the construction of a new virtual lab to do experiments and create a first publication based. This will often be done by the team involved in the core development.
 - Virtual lab Technical coordinator: Knows the lab from a technical perspective. Pushes the lab to the next readiness level. Works at VLIC.
-- Virtual lab Service operations: Can support users. Knows the lab and can help out when problems arise.
+- Virtual lab Service operations: Can support users. Knows the lab and can help out when problems arise. <span style="color:green">Do we want a specific trainer role?</span>  
 
 A person can fulfill multiple roles. In the virtual labs the distinction between development and use is a continuum. How many changes a scientist 
 will make to the codebase and libraries depends on whether the virtual lab already has the necessary assets for the user.
@@ -63,14 +63,23 @@ For each higher readiness level improvements should be made to the assets and do
 This user will receive support from the Lifewatch (VRE) development and operations team. This is the stage in which the lab is
 considered ready enough to support a golden use case. Quality assurance can indicate that the lab is ready for its first use.
 3. Workshop use: The lab can be used by multiple workshop participants under the guidance of an instructor that can point out what the user can safely change and can not change in the lab. 
-4. Operational service: Any ecologist can use their own instance of the lab for their research. No more support is needed to work in the lab. Any problems arising should be treated as bugs.
+4. Operational service: All scientists are welcome to create their own instance of the lab for their research. No more support is needed to work in the lab. Any problems arising should be treated as bugs.
 
 Whenever users of the virtual lab come up with a new idea that does not fit in the possibilities of the virtual lab they are using, 
 they can contact LifeWatch to discuss the possibilities of creating a new virtual lab.
 
 ![ NaaVRE_development_cycle.png not found](NaaVRE_development_cycle.png)  
 The virtual lab moves through the readiness levels, from core development to operational service. Users coming up with ideas for new experiments that do not fit in the virtual lab, 
-can, in collaboration with LifeWatch, create a new virtual lab that fits their needs.
+can, in collaboration with LifeWatch, create a new virtual lab that fits their needs.  
+
+The following table shows expectations of the timeliness, and number of teams and users involved per readiness level.
+
+| Readiness level     | Duration   | Developers | Users    | Context dissemination | Asset dissemination
+|---------------------|------------|------------|----------|-----------------------|-------------------
+| Core development    | 3-6 months | 1 team     | 0        |                       | 
+| First use           | 3 months   | 1 team     | 1        |                       |
+| Workshop use        | 3 months   |            | 10       |                       |
+| Operational service | 3 months   | infinite   | infinite |                       |
 
 #### What if the golden user is a core developer?
 In the case where the golden user is also a core developer, there will be less priority given to the usability of the virtual lab for others
@@ -89,7 +98,7 @@ In both cases we recommend to start off by doing the following:
 - Publish virtual lab metadata outside the virtual lab. Tip: Create the metadata in the external catalogue to avoid duplicate effort. <span style="color:green">ToDo: Check if we have a single preferred metadata catalogue</span>.
   - Track the metadata with version control, such that the changes to metadata can be viewed by virtual lab users.
   - ToDo VLIC: Choose a metadata standard. 
-   
+ 
 #### During core development
 Where possible, do the following while building the virtual lab:
 - Pin versions of used software and libraries in the dependencies to prevent compatibility problems when updates occur to the packages and software.                                                                                                                                                                                              
@@ -97,6 +106,11 @@ Where possible, do the following while building the virtual lab:
 - Parallelize the execution of the parts of the code where this is useful. A tutorial is available [here](https://github.com/QCDIS/lifewatch-notebooks/blob/main/NaaVRE-tutorials/splitting-classic.ipynb).
 - Create documentation for the virtual lab.
   - Track the documentation with version control.
+
+The following roles are involved during this phase:
+- Virtual lab owner / Principal investigator: Provides the use case that will be the first application of the virtual lab.
+- Virtual lab core developer: One or multiple core developers create a new virtual lab in NaaVRE. The virtual lab owner can be one of the core developers.
+- Virtual research environment (VRE) development and operations engineer: Supports the creation of the new virtual lab by giving the core development team advice and changing the virtual research environment where necessary. 
 
 #### From core development to first use
 A usability study should be done to determine if the lab is ready for its first use. The usability study should look at least at the following criteria:
@@ -137,6 +151,11 @@ A usability study should be done to determine if the lab is ready for its first 
     - A second paper should be a technical paper.
   - The publications should provide a description of use cases of the virtual lab.
 
+The following roles have a responsibility in this phase:
+- Virtual lab core developer: Provides support to the golden user.
+- Virtual lab owner / Principal investigator: Uses the virtual lab to do their research.
+- Virtual research environment (VRE) development and operations engineer: Support the core developers and golden user by providing advise and changing the virtual research environment where necessary.
+
 #### From first use to workshop use
 The virtual lab is ready for workshop use, if it meets the criteria for first use, and additionally the following:
 - Metadata
@@ -160,12 +179,22 @@ The virtual lab is ready for workshop use, if it meets the criteria for first us
 - Codebase
   - Find out if the architecture of the virtual lab is understandable and maintainable.
 
+The following responsibilities apply during this phase:
+- Virtual lab owner / Principal investigator: Gathers user feedback and determines how to facilitate other users in the virtual lab.
+- Virtual lab Service operations: Gives trainings to users. <span style="color:green">Do we want a specific trainer role?</span>
+- Virtual lab Technical coordinator: Answers any technical questions arising from the workshop use which the service operator can not answer. Has been involved as VRE DevOps engineer during the previous stages.
+
 #### From workshop use to operational service
 The virtual lab is an operational service if all previous criteria apply and additionally the following criteria apply:
 - Dependencies are specified. The dependencies are in the dockerfile, but should be duplicated in the metadata such that a person can in theory also run the source code on their own machine after installing the dependencies manually.
 
 #### During operational service
 - Make the containerized cells and workflow interoperable with other systems when use cases for the interoperability between NaaVRE and another system arises.  
+
+The following responsibilities apply during this phase:
+- Virtual lab owner / Principal investigator: Coordinates the further development of the virtual lab with a scientific vision. 
+- Virtual lab Technical coordinator: Ensures the VRE keeps supporting the virtual lab.
+- Virtual lab Service operations: Is the primary point of contact in case any problems arise with the virtual lab. <span style="color:green">Do we want a specific trainer role?</span>
 
 #### Readiness level checklist
 For the content of the virtual lab, the following checklist provides a guideline of what to keep in mind during the development 
@@ -188,7 +217,7 @@ The following guidelines can be used to determine the completeness of a user man
 - There is a description of the standards used for data exchange with application programming interfaces and databases.
 - Storage location: The description of the virtual lab from a conceptual and mathematical viewpoint is stored on [NaaVRE.net](https://naavre.net/). 
 - Architecture
-  - A description of the architecture of the virtual lab. In the simplest form this can be the flowchart created when composing a workflow. 
+  - A description of the architecture of the virtual lab. In the simplest form this can be the flowchart created when composing a workflow.
 
 ## Sources
 - These recommendations are partially based on ideas presented in the paper [Introducing the FAIR Principles for research software](https://www.nature.com/articles/s41597-022-01710-x), the [Fair software checklist](https://fairsoftwarechecklist.net/v0.2/), and [fair-software.eu](https://fair-software.eu/recommendations/license).
