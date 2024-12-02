@@ -40,7 +40,7 @@ Quality assurance can help the core development team identify issues arising whe
 Therefore, it is good to do quality assurance before others who are not in the same institute as the core developers start using the virtual lab.
 - Virtual lab developer: Once a virtual lab has reached a stage in which it can be used by others, users can expand and adapt the source code to suit their needs.
 - Virtual lab user: Researchers couple virtual labs assets, use their own datasets, and set their own parameters to run their own experiments in the virtual lab.
-  - Golden user: 
+  - Golden user: First user of the virtual lab.
 - Virtual lab visitor: Visits the virtual lab to see how experiments were done.
 - Virtual lab owner / Principal investigator: Coordinates the further development of the VL with a scientific vision. Will initially be the golden user
 who initiates the construction of a new virtual lab to do experiments and create a first publication based. This will often be done by the team involved in the core development.
@@ -58,7 +58,7 @@ will make to the codebase and libraries depends on whether the virtual lab alrea
 We discern five readiness levels in the development of a virtual lab. A new virtual lab starts at level 1.
 For each higher readiness level improvements should be made to the assets and documents in order to make the lab usable by others with an increasing amount of independence from the virtual lab core developers and VRE DevOps team.
 
-1. Core Development: Core development of the virtual lab is taking place in co-development with the Lifewatch team.
+1. Core Development: Core development of the virtual lab is taking place in co-development with the Lifewatch VRE development and operations team.
 2. First use: The first person not involved in the core development of the virtual lab can start using the virtual lab.
 This user will receive support from the Lifewatch (VRE) development and operations team. This is the stage in which the lab is
 considered ready enough to support a golden use case. Quality assurance can indicate that the lab is ready for its first use.
@@ -73,7 +73,8 @@ future use, regardless of whether the lab will be used by the same researchers, 
 or researchers from other institutions.
 
 #### Setting up a new lab
-The following should be done from the start of the creation of a new virtual lab:
+A new NaaVRE virtual lab can start with the creation of a new data processing, data analysis or simulation tool or with the migration of a legacy tool. 
+In both cases we recommend to start off by doing the following:
 - Store the codebase on a repository with version control (e.g. git).
   - Make sure personal tokens for APIs do not end up in version control. ToDo Vlic: Guideline for secret management https://github.com/QCDIS/projects_overview/issues/276
 - Choose a license for the virtual lab. We recommend using the [Apache license 2.0](https://choosealicense.com/licenses/apache-2.0/) if this is compatible with the other packages and software you use in the virtual lab. If the Apache License 2.0 does not suit your need, you can pick your own license, see https://choosealicense.com/ .
@@ -91,7 +92,7 @@ Where possible, do the following while building the virtual lab:
   - Track the documentation with version control.
 
 #### From core development to first use
-The virtual lab is ready for its first use, if it meets the following criteria:
+A usability study should be done to determine if the lab is ready for its first use. The usability study should look at least at the following criteria:
 - Security
   - Personal tokens are not tracked by version control.
 - Licensing
@@ -113,7 +114,8 @@ The virtual lab is ready for its first use, if it meets the following criteria:
 #### During first use
 - Data
   - Make data fair.
-  - Make sure the virtual lab can be used with different datasets.
+- Scenarios
+  - Make sure the virtual lab can be used on multiple scenarios.
 - Versioning
   - Give each containerized cell a persistent identifier and version number <span style="color:green">(This is currently not a feature in NaaVRE. But might become possible in the future. Added to [potential ToDos](#potential-todos-for-lifewatch-vlic))</span>
 - Documentation
@@ -132,9 +134,11 @@ The virtual lab is ready for its first use, if it meets the following criteria:
 The virtual lab is ready for workshop use, if it meets the criteria for first use, and additionally the following:
 - Metadata
   - All the fields of the metadata standard are present. 
+- Scenarios
+  - The virtual lab can be used in multiple scenarios.
 - Documentation
   - At least one domain scientist who was not involved in the development of the virtual lab has reviewed the user manual. The coding experience of the reviewer of the user manual is similar to the coding experience of the intended user.
-  - How to use the virtual lab on a different dataset is explained. 
+  - How to use the virtual lab on a different scenario is explained.
 - Codebase
   - Unit tests verify the behavior of used methods and libraries. There should be a testing guideline, which will be done in this issue [\#274](https://github.com/QCDIS/projects_overview/issues/274).
   - The virtual lab reads, writes and exchanges data in a way that meets domain-relevant community standards. [5] <span style="color:green">I think we will need to consult some ecologists to determine these standards. I aditionally emailed Nafiseh. </span>                                                                                                                                                                                                                                                                                                         
@@ -150,6 +154,7 @@ The virtual lab is ready for workshop use, if it meets the criteria for first us
   - Find out if the architecture of the virtual lab is understandable and maintainable.
 
 #### From workshop use to operational service
+The virtual lab is an operational service if all previous criteria apply and additionally the following criteria apply:
 - Dependencies are specified. The dependencies are in the dockerfile, but should be duplicated in the metadata such that a person can in theory also run the source code on their own machine after installing the dependencies manually.
 
 #### During operational service
