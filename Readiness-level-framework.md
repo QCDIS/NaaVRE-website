@@ -80,51 +80,76 @@ The following should be done from the start of the creation of a new virtual lab
 - Add a version number to the virtual lab. 
 - Publish virtual lab metadata outside the virtual lab. Tip: Create the metadata in the external catalogue to avoid duplicate effort. <span style="color:green">ToDo: Check if we have a single preferred metadata catalogue</span>.
   - Track the metadata with version control, such that the changes to metadata can be viewed by virtual lab users.
+  - ToDo VLIC: Choose a metadata standard. 
    
 #### During core development
 Where possible, do the following while building the virtual lab:
-- Aim for good code quality while developing a virtual lab in NaaVRE:
-  - Pin versions of used software and libraries In the dependencies to prevent compatibility problems when updates occur to the packages and software.                                                                                                                                                                                              
-  - Start each cell in the notebook with a title.
-- Parallelize the execution of the parts of the code where this is useful.
+- Pin versions of used software and libraries in the dependencies to prevent compatibility problems when updates occur to the packages and software.                                                                                                                                                                                              
+- Start each cell in the notebook with a title.
+- Parallelize the execution of the parts of the code where this is useful. A tutorial is available [here](https://github.com/QCDIS/lifewatch-notebooks/blob/main/NaaVRE-tutorials/splitting-classic.ipynb).
 - Create documentation for the virtual lab.
   - Track the documentation with version control.
-- Enable citation of the virtual lab.
 
 #### From core development to first use
 The virtual lab is ready for its first use, if it meets the following criteria:
-- The code executes without errors: The code can be executed without errors: Currently, you can verify this by manually executing all cells in the notebook on a machine on which the code was not developed (to ensure no references are made to local resources).
-- [Parallel processing](https://github.com/QCDIS/lifewatch-notebooks/blob/main/NaaVRE-tutorials/splitting-classic.ipynb) is applied where suitable.
-- The responsibility of each cell in the notebook is clear and can be described in a single sentence.
-- The notebook cells can be containerized.
-- The containerized cells can run without any modifications.
+- Security
+  - Personal tokens are not tracked by version control.
+- Licensing
+  - The virtual lab has a license.
+- Versioning
+  - The virtual lab has a version number.
+  - Versions of used software and libraries are pinned. 
+- Metadata
+  - The metadata of the virtual lab is published.
+- Codebase
+  - The code executes without errors: The code can be executed without errors: Currently, you can verify this by manually executing all cells in the notebook on a machine on which the code was not developed (to ensure no references are made to local resources).
+  - The responsibility of each cell in the notebook is clear and can be described in a single sentence.
+- Parallel processing is applied where suitable.
+- Containerization
+  - The notebook cells can be containerized.
+- Workflow execution
+  - The containerized cells can run without any modifications.
 
 #### During first use
-- Make data fair.
-- Publication of two papers:
-  - One in the ecosystem domain.
-  - A second paper should be a technical paper.
-- Give each containerized cell a persistent identifier and version number <span style="color:green">(This is currently not a feature in NaaVRE. But might become possible in the future. Added to [potential ToDos](#potential-todos-for-lifewatch-vlic))</span>
-- Create a [user manual](#User-manual) for the virtual lab. 
-- Make sure the virtual lab can be used with different datasets.
-- Create a description of use cases. This can be a link to another source (website / publication).
+- Data
+  - Make data fair.
+  - Make sure the virtual lab can be used with different datasets.
+- Versioning
+  - Give each containerized cell a persistent identifier and version number <span style="color:green">(This is currently not a feature in NaaVRE. But might become possible in the future. Added to [potential ToDos](#potential-todos-for-lifewatch-vlic))</span>
+- Documentation
+  - Create a [user manual](#User-manual) for the virtual lab.
+- Metadata
+  - Fill in all metadata fields
+- Codebase
+  - Add unit tests to verify the behavior of used methods and libraries.
+- Publication:
+  - Two papers should be published:
+    - One in the ecosystem domain.
+    - A second paper should be a technical paper.
+  - The publications should provide a description of use cases of the virtual lab.
 
 #### From first use to workshop use
 The virtual lab is ready for workshop use, if it meets the criteria for first use, and additionally the following:
-- Unit tests verify the behavior of used methods and libraries. There should be a testing guideline, which will be done in this issue [\#274](https://github.com/QCDIS/projects_overview/issues/274).
-- The virtual lab reads, writes and exchanges data in a way that meets domain-relevant community standards. [5] <span style="color:green">I think we will need to consult some ecologists to determine these standards. I aditionally emailed Nafiseh. </span>                                                                                                                                                                                                                                                                                                         
-- The code within cells is easily human-readable and others can easily modify it. If methods have side effects, this is clear to the user.
-- The input and output of each cell is clear. It is both clear what the structure is (e.g. what data type is used) and what the data content is from a domain perspective.
-- The duration of computation, memory usage, and power usage of the container is acceptable. As there is currently no dashboard to monitor resource usage, contact the VLIC team for guidelines.
-- At least one domain scientist who was not involved in the development of the virtual lab has reviewed the user manual. The coding experience of the reviewer of the user manual is similar to the coding experience of the intended user.
-- How to use the virtual lab on a different dataset is explained. 
+- Metadata
+  - All the fields of the metadata standard are present. 
+- Documentation
+  - At least one domain scientist who was not involved in the development of the virtual lab has reviewed the user manual. The coding experience of the reviewer of the user manual is similar to the coding experience of the intended user.
+  - How to use the virtual lab on a different dataset is explained. 
+- Codebase
+  - Unit tests verify the behavior of used methods and libraries. There should be a testing guideline, which will be done in this issue [\#274](https://github.com/QCDIS/projects_overview/issues/274).
+  - The virtual lab reads, writes and exchanges data in a way that meets domain-relevant community standards. [5] <span style="color:green">I think we will need to consult some ecologists to determine these standards. I aditionally emailed Nafiseh. </span>                                                                                                                                                                                                                                                                                                         
+  - The code within cells is easily human-readable and others can easily modify it. If methods have side effects, this is clear to the user.
+  - The input and output of each cell is clear. It is both clear what the structure is (e.g. what data type is used) and what the data content is from a domain perspective.
+- Workflow
+  - The duration of computation, memory usage, and power usage of the container is acceptable. As there is currently no dashboard to monitor resource usage, contact the VLIC team for guidelines.
 
 #### During workshop use
-- Find out if the architecture of the virtual lab is understandable and maintainable.(e.g. There is a flowchart showing the notebook cells and classes).
+- Documentation
+  - Gather user feedback on the documentation.
+- Codebase
+  - Find out if the architecture of the virtual lab is understandable and maintainable.
 
 #### From workshop use to operational service
-- Add a description of the architecture of the virtual lab (e.g. a flowchart showing the notebook cells and classes).  
-- All the fields of the metadata standard are present. ToDo VLIC: Choose a metadata standard. 
 - Dependencies are specified. The dependencies are in the dockerfile, but should be duplicated in the metadata such that a person can in theory also run the source code on their own machine after installing the dependencies manually.
 
 #### During operational service
@@ -149,7 +174,9 @@ The following guidelines can be used to determine the completeness of a user man
   - The tutorial can be done without supervision.
 - Known potential pitfalls in using the virtual lab are described.
 - There is a description of the standards used for data exchange with application programming interfaces and databases.
-- Storage location: The description of the virtual lab from an conceptual and mathematical viewpoint is stored on [NaaVRE.net](https://naavre.net/). 
+- Storage location: The description of the virtual lab from a conceptual and mathematical viewpoint is stored on [NaaVRE.net](https://naavre.net/). 
+- Architecture
+  - A description of the architecture of the virtual lab. In the simplest form this can be the flowchart created when composing a workflow. 
 
 ## Sources
 - These recommendations are partially based on ideas presented in the paper [Introducing the FAIR Principles for research software](https://www.nature.com/articles/s41597-022-01710-x), the [Fair software checklist](https://fairsoftwarechecklist.net/v0.2/), and [fair-software.eu](https://fair-software.eu/recommendations/license).
