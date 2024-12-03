@@ -4,44 +4,36 @@ This draft version contains some revision questions, which are marked in <span s
 
 Version 1.0.0
 
-NaaVRE enables scientists to create their own virtual labs, by providing the infrastructure by providing the 
-infrastructure for easy experiment design, modification, and execution. 
-A collaborative effort between ecosystem specialists, computational scientists, and development and operations engineers 
+NaaVRE facilitates data processing, data analysis, and simulation by enabling scientists to create their own virtual labs.
+A collaborative effort between ecosystem specialists, computational scientists, data scientists, and development and operations engineers 
 ensures that virtual labs are optimized to support research effectively.
-
 Virtual labs evolve through distinct stages: Initially, development is the primary focus. As the lab matures, 
 it transitions to support a first user, and ultimately, multiple users can conduct experiments within the environment.  
 
 This readiness level framework assists researchers in building virtual labs by:
 - Defining the content of virtual labs. 
 - Describing the roles involved in the development and use of a virtual lab.
-- Describing the progression of a virtual lab through readiness levels, highlighting milestones and requirements.
+- Describing the progression of a virtual lab through readiness levels, highlighting requirements, milestones and responsibilities.
 
 ## Content of a virtual lab
 A virtual lab can contain four types of assets <span style="color:green">(Should we choose between the terms: resource & asset? Nanohub uses “resource”. Maybe we should discuss this with domain scientists)</span>:
 - The codebase: Any code written for the virtual lab.
-- Libraries: Used by the codebase, but not written for the virtual lab.
-- Data: <span style="color:green">What do we consider to be the role of datasets in the NaaVRE virtual lab? Data will be produced by processing, analysis, and simulations, but do we want to store these internally? </span>
-- Containerized cells and workflow.    
+- Libraries: Code used by the codebase, but not written for the virtual lab.
+- Data: Stored data that is produced by data processing, data analysis, and simulations in NaaVRE.
+- Containerized cells and workflows.    
 
-Besides assets, we encourage the creators of a virtual lab to support the usability of the assets, by creating the following documents:
+Besides assets, we encourage the creators of a virtual lab to support the usability of the assets, by providing documents:
 - Metadata.
 - Documentation, including a tutorial.
 - Software management plan <span style="color:green">(Do we need a virtual lab to specify who is planning to upkeep the virtual lab? Shall we focus on getting a readiness level framework which mentions a software management plan, and work out the details of what should be in the software management plan later? I think a software management plan belongs to a readiness level which no lab will currently reach.)</span>
 
-Currently, NaavRE is mostly used for scientific Workflows e.g. data processing, data analysis, and simulation. <span style="color:green">Integrate this sentence in the story.</span>  
-
 ## Virtual lab roles
 NaaVRE aims to be a virtual research environment (VRE) that enables experts in computational ecology and ecological data analysis
 to create virtual labs in which users conduct their research.
-Our platform needs contributions from multiple roles to enable innovative research methods:
-- Virtual lab core developer: Creates a new virtual lab in NaaVRE. Virtual lab core development is done in a co-development process with the DevOps engineers at LifeWatch. 
+Our platform needs contributions from the following roles to enable innovative research methods:
+- Virtual lab core developers: Create a new virtual lab in NaaVRE. 
 - Virtual lab code reviewer: Provides feedback during core development on the user-friendliness, maintainability, and robustness of the
-source code and other assets. We recommend starting with reviews as early on in the development process, as this may contribute to a clear architecture, and good code quality.
-- Virtual lab quality assurance engineer: If core developers and reviewers believe the virtual lab to be ready to be used by others,
-people who were not involved in the development of the virtual lab, can try out the virtual lab with a fresh pair of eyes and do suggestions.
-Quality assurance can help the core development team identify issues arising when others start using the virtual lab.
-Therefore, it is good to do quality assurance before others who are not in the same institute as the core developers start using the virtual lab.
+source code and other assets.
 - Virtual lab developer: Once a virtual lab has reached a stage in which it can be used by others, users can expand and adapt the source code to suit their needs.
 - Virtual lab user: Researchers couple virtual labs assets, use their own datasets, and set their own parameters to run their own experiments in the virtual lab.
   - Golden user: First user of the virtual lab.
@@ -50,7 +42,7 @@ Therefore, it is good to do quality assurance before others who are not in the s
 who initiates the construction of a new virtual lab to do experiments and create a first publication based. This will often be done by the team involved in the core development.
 - Virtual lab technical coordinator: Knows the lab from a technical perspective. Pushes the lab to the next readiness level. Works at VLIC.
 - Virtual lab service operations: Can support users. Knows the lab and can help out when problems arise. <span style="color:green">Do we want a specific trainer role?</span>  
-- Virtual research environment (VRE) development and operations engineer: Creating and maintaining NaaVRE the software in which virtual labs can be created. This is done by LifeWatch.
+- Virtual research environment (VRE) development and operations (DevOps) engineer: Creating and maintaining NaaVRE the software in which virtual labs can be created. This is done by LifeWatch.
 - Networked infrastructures scientist: Contribute state-of-the-art components to the NaaVRE and can publish technical papers 
 that demonstrate the relevance of NaaVRE in the field of networked systems.
 
@@ -113,6 +105,8 @@ Where possible, do the following while building the virtual lab:
 The following roles are involved during this phase:
 - Virtual lab owner / Principal investigator: Provides the use case that will be the first application of the virtual lab.
 - Virtual lab core developer: One or multiple core developers create a new virtual lab in NaaVRE. The virtual lab owner can be one of the core developers.
+- Virtual lab code reviewer: Provides feedback on the user-friendliness, maintainability, and robustness of the
+source code and other assets. We recommend starting with reviews as early on in the development process, as this may contribute to a clear architecture, and good code quality.
 - Virtual research environment (VRE) development and operations engineer: Supports the creation of the new virtual lab by giving the core development team advice and changing the virtual research environment where necessary. 
 
 #### Core development milestone
@@ -163,6 +157,8 @@ The following roles have a responsibility in this phase:
 - Virtual lab core developer: Provides support to the virtual lab owner.
 - Virtual lab owner / Principal investigator: Uses the virtual lab to do their research. Publishes a paper in the ecosystem domain.
 - Networked infrastructures scientist: Publishes a technical paper.
+- Virtual lab service operator: When the virtual lab owner, and reviewers believe the virtual lab to be ready to be used by others,
+the virtual lab service operator can try out the virtual lab with a fresh pair of eyes and do suggestions. The can help the virtual lab owner identify issues arising when others start using the virtual lab.
 - Virtual research environment (VRE) development and operations engineer: Support the core developers and golden user by providing advise and changing the virtual research environment where necessary.
 
 ### From first use to workshop use
