@@ -1,16 +1,21 @@
 # Readiness level framework for virtual labs in NaaVRE
 
-This draft version contains some parts with a high level of doubt, which are marked in <span style="color:green">green</span>.
+This draft version contains some revision questions, which are marked in <span style="color:green">green</span>.
 
-Version 1.0.0   
-Published <span style="color:green">current date</span>
+Version 1.0.0
 
-<span style="color:green">This is a boring paragraph. Make it more lively.</span>  
-The aim of this readiness level framework is to guide virtual lab developers by giving recommendations of what to include in their virtual lab and what to prioritize. 
-The document first describes the content of virtual labs in [NaaVRE](https://naavre.net/) and contributions that can be made 
-to create a common viewpoint of the software and the users.
-Next it describes four readiness levels in which the virtual lab can be. It then proceeds with checklists that guide
-virtual lab creators to get their virtual lab to the next readiness level.
+Notebook-as-a-VRE enables scientists to create their own virtual labs, by providing the infrastructure by providing the 
+infrastructure for easy experiment design, modification, and execution. 
+A collaborative effort between ecosystem specialists, computational scientists, and development and operations engineers 
+ensures that virtual labs are optimized to support research effectively.
+
+Virtual labs evolve through distinct stages: Initially, development is the primary focus. As the lab matures, 
+it transitions to support a first user, and ultimately, multiple users can conduct experiments within the environment.  
+
+This readiness level framework assists researchers in building virtual labs by:
+- Defining the content of virtual labs. 
+- Describing the roles involved in the development and use of a virtual lab.
+- Describing the progression of a virtual lab through readiness levels, highlighting milestones and requirements.
 
 ### Content of a virtual lab
 A virtual lab can contain four types of assets <span style="color:green">(Should we choose between the terms: resource & asset? Nanohub uses “resource”. Maybe we should discuss this with domain scientists)</span>:
@@ -50,10 +55,6 @@ who initiates the construction of a new virtual lab to do experiments and create
 A person can fulfill multiple roles. In the virtual labs the distinction between development and use is a continuum. How many changes a scientist 
 will make to the codebase and libraries depends on whether the virtual lab already has the necessary assets for the user.
 
-### Responsibilities
-#### VRE development and operations engineer
-- Implement developments from cloud researches and thesis students into NaaVRE.
-
 ### Readiness levels
 We discern four readiness levels in the development of a virtual lab. A new virtual lab starts at level 1.
 For each higher readiness level improvements should be made to the assets and documents in order to make the lab usable by others with an increasing amount of independence from the virtual lab core developers and VRE DevOps team.
@@ -74,11 +75,11 @@ can, in collaboration with LifeWatch, create a new virtual lab that fits their n
 
 The following table shows expectations of the timeliness, and number of teams and users involved per readiness level.
 
-| Readiness level     | Duration   | Developers | Users    | Context dissemination | Asset dissemination
-|---------------------|------------|------------|----------|-----------------------|-------------------
-| Core development    | 3-6 months | 1 team     | 0        |                       | 
-| First use           | 3 months   | 1 team     | 1        |                       |
-| Workshop use        | 3 months   |            | 10       |                       |
+| Readiness level     | Duration   | Developers | Users    | Context dissemination | 
+|---------------------|------------|------------|----------|-----------------------|
+| Core development    | 3-6 months | 1 team     | 0        | Metadata publication  | 
+| First use           | 3 months   | 1 team     | 1        | Paper publication     |
+| Workshop use        | 3 months   | 10-25      | 10-25    |                       |
 | Operational service | 3 months   | infinite   | infinite |                       |
 
 #### What if the golden user is a core developer?
@@ -187,6 +188,7 @@ The following responsibilities apply during this phase:
 #### From workshop use to operational service
 The virtual lab is an operational service if all previous criteria apply and additionally the following criteria apply:
 - Dependencies are specified. The dependencies are in the dockerfile, but should be duplicated in the metadata such that a person can in theory also run the source code on their own machine after installing the dependencies manually.
+- <span style="color:green">Deployed on MyLifeWatch</span>
 
 #### During operational service
 - Make the containerized cells and workflow interoperable with other systems when use cases for the interoperability between NaaVRE and another system arises.  
