@@ -200,15 +200,18 @@ Has been involved as VRE DevOps engineer during the previous stages.
 
 ### From workshop use to operational service
 The virtual lab is an operational service if all previous criteria apply and additionally the following criteria apply:
-- Dependencies are specified. The dependencies are in the dockerfile, but should be duplicated in the metadata such that a person can in theory also run the source code on their own machine after installing the dependencies manually.
-- <span style="color:green">Deployed on MyLifeWatch</span>
+- Dependencies are specified. The dependencies are in the dockerfile of the virtual lab, 
+but should be duplicated in the metadata such that a person can in theory also run the source code on their own machine after installing the dependencies manually.
+- Deploy the virtual lab on MyLifeWatch.
 
 ### During operational service
 The following should be done during operational service:
-- Make the containerized cells and workflow interoperable with other systems when use cases for the interoperability between NaaVRE and another system arises.
+- Expand and adapt the virtual lab where useful or necessary.
+- Make the containerized cells and workflow interoperable with other systems where use cases for the interoperability between NaaVRE and another system arise.
 
 #### Operational service milestones
-- Users of the virtual lab manage to run their own scenarios in the virtual lab.
+The following milestones can occur when a virtual lab runs as an operational service:
+- Users of the virtual lab successfully run their own scenarios in the virtual lab.
 - Virtual lab developers make their own modifications to the virtual lab to facilitate their research.
 - Users come up with ideas that spawn the creation of a new virtual lab:
 Whenever users of the virtual lab come up with a new idea that does not fit in the possibilities of existing virtual labs, 
@@ -221,14 +224,17 @@ The following responsibilities apply during this phase:
 - Virtual lab service operations: Is the primary point of contact in case any problems arise with the virtual lab. <span style="color:green">Do we want a specific trainer role?</span>  
 
 ![ NaaVRE_development_cycle.png not found](NaaVRE_development_cycle.png)  
-The virtual lab moves through the readiness levels, from core development to operational service. Users coming up with ideas for new experiments that do not fit in the virtual lab, 
-can, in collaboration with LifeWatch, create a new virtual lab that fits their needs.  
+Figure1: The virtual lab moves through the readiness levels, from core development to operational service. Users coming up with ideas for new experiments that do not fit in the virtual lab, 
+can in collaboration with LifeWatch create a new virtual lab that fits their needs.  
+<span style="color:green">Should we use the virtual lab logo instead of the NaaVRE logo? So the Erlenmeyer, beaker and cloud?</span>
 
 ### User manual
 The following guidelines can be used to determine the completeness of a user manual.
 - The virtual lab is explained from the following viewpoints:
   - A conceptual viewpoint. There is an intuitive description of what happens.
   - A mathematical viewpoint. How the real world system relates to the used mathematical algorithm is clear.
+  - A computational viewpoint: How the algorithm is converted into computational methods is explained.
+  - An engineering viewpoint: There is a description of the software architecture of the virtual lab.
 - The parameters are clear.
     - It is clear what the ecological meaning of the parameter is.  
     - It is clear how to change these parameters.
@@ -236,14 +242,16 @@ The following guidelines can be used to determine the completeness of a user man
   - The tutorial can be done without supervision.
 - Known potential pitfalls in using the virtual lab are described.
 - There is a description of the standards used for data exchange with application programming interfaces and databases.
-- Storage location: The description of the virtual lab from a conceptual and mathematical viewpoint is stored on [NaaVRE.net](https://naavre.net/). 
-- Architecture
-  - A description of the architecture of the virtual lab. In the simplest form this can be the flowchart created when composing a workflow.
+- Storage location 
+  - The description of the virtual lab from the viewpoints is stored on [NaaVRE.net](https://naavre.net/). A visitor needs to be able to 
+get an intuitive understanding of what happens in the virtual lab without having to open it.
+  - Parts of the documentation which are only related to a single notebook can be stored in that notebook.
 
 ## Sources
 - These recommendations are partially based on ideas presented in the paper [Introducing the FAIR Principles for research software](https://www.nature.com/articles/s41597-022-01710-x), the [Fair software checklist](https://fairsoftwarechecklist.net/v0.2/), and [fair-software.eu](https://fair-software.eu/recommendations/license).
 
 ## Potential ToDos for LifeWatch VLIC
+To be able to cycle through the entire readiness cycle described here, LifeWatch VLIC needs to finish the following: 
 - Make NaaVRE generate a persistent identifier and version number for containerized cells. See [Containerized cells and Workflow](#containerized-cells-and-workflow).
 - Software management plan: Shall we focus on getting a readiness level framework which mentions a software management plan, and work out the details of what should be in the [software management plan](https://zenodo.org/records/7248877) later?
 - Choose a metadata standard for Virtual labs.  https://github.com/QCDIS/projects_overview/issues/275
