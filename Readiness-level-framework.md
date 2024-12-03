@@ -69,34 +69,44 @@ The following table gives indications of the duration, number of teams and users
 | Operational service | 3 months   | infinite   | infinite |                       |
 
 ### Starting core development
-A new NaaVRE virtual lab can start with the creation of a new data processing, data analysis or simulation tool or with the migration of a legacy tool. 
-In both cases we recommend to start off by doing the following:
-- Store the codebase on a repository with version control (e.g. git).
+We recommend to start the creation of a new virtual lab by doing the following:
+- Version control
+  - Store the codebase on a repository with version control (e.g. git).
+- Security
   - Make sure personal tokens for APIs do not end up in version control. ToDo Vlic: Guideline for secret management https://github.com/QCDIS/projects_overview/issues/276
-- Choose a license for the virtual lab. We recommend using the [Apache license 2.0](https://choosealicense.com/licenses/apache-2.0/) if this is compatible with the other packages and software you use in the virtual lab. If the Apache License 2.0 does not suit your need, you can pick your own license, see https://choosealicense.com/ .
-- Add a version number to the virtual lab. 
-- Publish virtual lab metadata outside the virtual lab. Tip: Create the metadata in the external catalogue to avoid duplicate effort. <span style="color:green">ToDo: Check if we have a single preferred metadata catalogue</span>.
-  - Track the metadata with version control, such that the changes to metadata can be viewed by virtual lab users.
-  - ToDo VLIC: Choose a metadata standard. 
+- Licensing
+  - Choose a license for the virtual lab. We recommend using the [Apache license 2.0](https://choosealicense.com/licenses/apache-2.0/), 
+assuming this is compatible with the other packages and software you use in the virtual lab. If the Apache License 2.0 is incompatible with software or libraries used, 
+you can pick another license. We recommend having a look at https://choosealicense.com/.
+- Documentation
+  - Publish virtual lab metadata outside the virtual lab. This will allow others to be aware of the context of the virtual lab from an early stage.
+<span style="color:green">ToDo: Check if we have a single preferred metadata catalogue</span>.
+    - Track the metadata with version control, such that the changes to metadata can be viewed by virtual lab users.
+    - <span style="color:green">ToDo VLIC: Choose a metadata standard. </span>
  
 ### During core development
 Where possible, do the following while building the virtual lab:
-- Pin versions of used software and libraries in the dependencies to prevent compatibility problems when updates occur to the packages and software.                                                                                                                                                                                              
+- Versioning
+  - Pin versions of used software and libraries in the dependencies to prevent compatibility problems when updates occur to the packages and software.                                                                                                                                                                                              
 - Start each cell in the notebook with a title.
-- Parallelize the execution of the parts of the code where this is useful. A tutorial is available [here](https://github.com/QCDIS/lifewatch-notebooks/blob/main/NaaVRE-tutorials/splitting-classic.ipynb).
-- Create documentation for the virtual lab.
-  - Track the documentation with version control.
+- Parallelization
+  - Parallelize the execution of the parts of the code where this is useful. A tutorial is available [here](https://github.com/QCDIS/lifewatch-notebooks/blob/main/NaaVRE-tutorials/splitting-classic.ipynb).
+- Documentation
+  - Create documentation for the virtual lab.
+    - Track the documentation with version control.
 
 #### Core development responsibilities
 The following roles are involved during this phase:
-- Virtual lab owner / Principal investigator: Provides the use case that will be the first application of the virtual lab.
-- Virtual lab core developer: One or multiple core developers create a new virtual lab in NaaVRE. The virtual lab owner can be one of the core developers.
+- Virtual lab owner / Principal investigator: Provides the use case that will be the first application of the virtual lab. 
+Guides the development of the lab from the scientific viewpoint. 
+- Virtual lab core developers: One or multiple core developers create a new virtual lab in NaaVRE.
 - Virtual lab code reviewer: Provides feedback on the user-friendliness, maintainability, and robustness of the
-source code and other assets. We recommend starting with reviews as early on in the development process, as this may contribute to a clear architecture, and good code quality.
-- Virtual research environment (VRE) development and operations engineer: Supports the creation of the new virtual lab by giving the core development team advice and changing the virtual research environment where necessary.
+source code and other assets. We recommend starting with reviews early on in the development process, as this may contribute to a clear architecture, and good code quality.
+- Virtual research environment (VRE) development and operations engineers: Support the creation of the new virtual lab 
+by giving the core development team advice and changing the virtual research environment where necessary.
 
 #### Core development milestone
-The milestone to reach during core development is a demonstration of running the workflow of the virtual lab.
+The milestone to reach during core development is a demonstration of a running the workflow in the virtual lab.
 
 ### From core development to first use
 A usability study should be done to determine if the lab is ready for its first use. The usability study should look at least at the following criteria:
@@ -105,12 +115,12 @@ A usability study should be done to determine if the lab is ready for its first 
 - Licensing
   - The virtual lab has a license.
 - Versioning
-  - The virtual lab has a version number.
   - Versions of used software and libraries are pinned. 
 - Metadata
   - The metadata of the virtual lab is published.
 - Codebase
-  - The code executes without errors: The code can be executed without errors: Currently, you can verify this by manually executing all cells in the notebook on a machine on which the code was not developed (to ensure no references are made to local resources).
+  - The code executes without errors: The code can be executed without errors. 
+Currently, you can verify this by manually executing all cells in the notebook on a machine on which the code was not developed (to ensure no references are made to local resources).
   - The responsibility of each cell in the notebook is clear and can be described in a single sentence.
 - Parallel processing is applied where suitable.
 - Containerization
@@ -125,6 +135,7 @@ The following should be done during first use:
 - Scenarios
   - Make sure and describe how the virtual lab can be used on multiple scenarios.
 - Versioning
+  - Add a version number to the virtual lab so users can refer to this number when they are reporting reproducibility or bug issues. 
   - Give each containerized cell a persistent identifier and version number <span style="color:green">(This is currently not a feature in NaaVRE. But might become possible in the future. Added to [potential ToDos](#potential-todos-for-lifewatch-vlic))</span>
 - Documentation
   - Create a [user manual](#User-manual) for the virtual lab.
