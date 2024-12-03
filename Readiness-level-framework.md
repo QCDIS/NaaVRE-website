@@ -129,37 +129,36 @@ Currently, you can verify this by manually executing all cells in the notebook o
   - The containerized cells can run without any modifications.
 
 ### During first use
-The following should be done during first use:
+Besides running scenarios in the virtual lab, the following should be done per category during first use:
 - Data
   - Make data fair.
 - Scenarios
-  - Make sure and describe how the virtual lab can be used on multiple scenarios.
+  - Make sure and describe how the virtual lab can be used on different scenarios.
 - Versioning
   - Add a version number to the virtual lab so users can refer to this number when they are reporting reproducibility or bug issues. 
   - Give each containerized cell a persistent identifier and version number <span style="color:green">(This is currently not a feature in NaaVRE. But might become possible in the future. Added to [potential ToDos](#potential-todos-for-lifewatch-vlic))</span>
 - Documentation
   - Create a [user manual](#User-manual) for the virtual lab.
 - Metadata
-  - Fill in all metadata fields
+  - Complete all metadata fields
 - Codebase
   - Add unit tests to verify the behavior of used methods and libraries.
 
 #### First use Milestones
-During first use, two papers should be published:
-1. A paper in the ecosystem domain.
-2. A technical paper.
+Two papers should be published:
+1. A paper in the ecosystem domain presenting the scenarios run in the virtual lab.
+2. A technical paper.  
+
+Additionally the virtual lab should be made publicly available.
 
 #### First use responsibilities
 The following roles have a responsibility in this phase:
-- Virtual lab core developer: Provides support to the virtual lab owner.
 - Virtual lab owner / Principal investigator: Uses the virtual lab to do their research. Publishes a paper in the ecosystem domain.
+- Virtual lab core developers: Provide support to the virtual lab owner.
 - Networked infrastructures scientist: Publishes a technical paper.
-- Virtual lab service operator: When the virtual lab owner, and reviewers believe the virtual lab to be ready to be used by others,
-the virtual lab service operator can try out the virtual lab with a fresh pair of eyes and do suggestions. The can help the virtual lab owner identify issues arising when others start using the virtual lab.
+- Virtual lab service operator: Once the virtual lab owner, and reviewers believe the virtual lab to be ready to be used by others,
+the virtual lab service operator tries out the virtual lab and makes suggestions. Helps the virtual lab owner identify issues arising when others start using the virtual lab.
 - VRE DevOps engineer: Support the core developers and golden user by providing advise and changing the virtual research environment where necessary.
-
-!!!! This user will receive support from the Lifewatch (VRE) development and operations team. This is the stage in which the lab is
-!!!! considered ready enough to support a golden use case. Quality assurance can indicate that the lab is ready for its first use.
 
 ### From first use to workshop use
 The virtual lab is ready for workshop use, if it meets the criteria for first use, and additionally the following:
