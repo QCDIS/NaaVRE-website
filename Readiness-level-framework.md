@@ -143,6 +143,7 @@ Besides running scenarios in the virtual lab, the following should be done per c
   - Complete all metadata fields
 - Codebase
   - Add unit tests to verify the behavior of used methods and libraries.
+  - Define clear responsibilities of all notebook cells, methods and classes.
 
 #### First use Milestones
 Two papers should be published:
@@ -161,13 +162,14 @@ the virtual lab service operator tries out the virtual lab and makes suggestions
 - VRE DevOps engineer: Support the core developers and golden user by providing advise and changing the virtual research environment where necessary.
 
 ### From first use to workshop use
-The virtual lab is ready for workshop use, if it meets the criteria for first use, and additionally the following:
+The virtual lab is ready for workshop use, if it meets the criteria for first use, and additionally meets the following requirements:
 - Metadata
   - All the fields of the metadata standard are present. 
 - Scenarios
   - The virtual lab can be used in multiple scenarios.
 - Documentation
-  - At least one domain scientist who was not involved in the development of the virtual lab has reviewed the user manual. The coding experience of the reviewer of the user manual is similar to the coding experience of the intended user.
+  - At least one domain scientist who was not involved in the development of the virtual lab has reviewed the user manual. 
+The coding experience of the reviewer of the user manual is similar to the coding experience of the intended user.
   - How to use the virtual lab on a different scenario is explained.
 - Codebase
   - Unit tests verify the behavior of used methods and libraries. There should be a testing guideline, which will be done in this issue [\#274](https://github.com/QCDIS/projects_overview/issues/274).
@@ -185,14 +187,16 @@ The following should be done during workshop use:
   - Find out if the architecture of the virtual lab is understandable and maintainable.
 
 #### Workshop use milestone
-In this phase at least one workshop should be given to a group of 10 to 25 potential users.
+In this phase at least one workshop should be given to a group of 10 to 25 potential users. 
+Additionally, user feedback should be gathered and processed.
 
 #### Workshop use responsibilities
 The following responsibilities apply during this phase:
 - Virtual lab owner / Principal investigator: Gathers user feedback and determines how to facilitate other users in the virtual lab.
-- Virtual lab service operator: Gives trainings to users. <span style="color:green">Do we want a specific trainer role?</span>
-- !!!!!that can point out what the user can safely change and can not change in the lab. 
-- Virtual lab technical coordinator: Answers any technical questions arising from the workshop use which the service operator can not answer. Has been involved as VRE DevOps engineer during the previous stages.
+- Virtual lab service operator: Gives trainings to users. Can point out what the user can change and can not change in the lab. 
+<span style="color:green">Do we want a specific trainer role?</span>
+- Virtual lab technical coordinator: Answers any technical questions arising from the workshop use which the service operator can not answer. 
+Has been involved as VRE DevOps engineer during the previous stages.
 
 ### From workshop use to operational service
 The virtual lab is an operational service if all previous criteria apply and additionally the following criteria apply:
