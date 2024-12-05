@@ -79,6 +79,7 @@ We recommend to start the creation of a new virtual lab by doing the following:
 assuming this is compatible with the other packages and software you use in the virtual lab. If the Apache License 2.0 is incompatible with software or libraries used, 
 you can pick another license. We recommend having a look at https://choosealicense.com/.
 - Documentation
+  - Pick a nice name for your virtual lab. Make sure the name won't be mixed up with other virtual labs.
   - Publish virtual lab metadata outside the virtual lab. This will allow others to be aware of the context of the virtual lab from an early stage.
 <span style="color:green">ToDo: Check if we have a single preferred metadata catalogue</span>.
     - Track the metadata with version control, such that the changes to metadata can be viewed by virtual lab users.
