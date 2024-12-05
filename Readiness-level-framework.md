@@ -178,6 +178,11 @@ The coding experience of the reviewer of the user manual is similar to the codin
   - The input and output of each cell is clear. It is both clear what the structure is (e.g. what data type is used) and what the data content is from a domain perspective.
 - Workflow
   - The duration of computation, memory usage, and power usage of the container is acceptable. As there is currently no dashboard to monitor resource usage, contact the VLIC team for guidelines.
+- Infrastructure
+  - The infrastructure requirements for the workshop are known and the necessary infrastructure has been provided:
+    - The number of people taking part in a workshop.
+    - The random access memory and permanent storage usage of the virtual lab are known. 
+    - The amount of processors the virtual lab uses is known.
 
 ### During workshop use
 The following should be done during workshop use:
