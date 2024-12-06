@@ -34,21 +34,25 @@ NaaVRE aims to be a virtual research environment (VRE) that enables experts in c
 to create virtual labs.
 Our platform needs contributions from the multiple roles to enable innovative research methods. Some people will only have 
 one role for the virtual lab, while others might have multiple of the following roles:
-- Virtual lab owner / Principal investigator: Coordinates the development of the virtual lab with a scientific vision.
-This will often be the golden user, i.e. the person that provides the initial publishable use case of the virtual lab. 
-- Virtual lab core developers: Develop a new virtual lab in NaaVRE. Often the virtual lab owner will be one of the core developers. 
-- Virtual lab code reviewers: Provide feedback during core development on the user-friendliness, maintainability, and robustness of the
-source code and other assets.
-- Virtual lab users: Researchers that couple virtual labs assets, and run their own scenarios in the virtual lab.
-- Virtual lab developer: Users who, besides coupling assets and running scenarios, expand and adapt the source code 
-within their own copy of the virtual lab to suit their needs. In the virtual labs the distinction between development 
-and use is a continuum. How many changes a scientist will make to the codebase and libraries depends on whether the virtual lab already has the necessary assets for the user.
-- Virtual lab visitor: Visits the virtual lab to see how experiments were done and what is possible in the virtual lab.
-- Virtual lab service operator: Can support users. Knows the lab and can help out when problems arise. <span style="color:green">Do we want a specific trainer role? My current assumption is that this person will give the trainings</span>  
-- Virtual lab technical coordinator: Knows the lab from a technical perspective and pushes the lab to the next readiness level. Often, this will be an employee at LifeWatch ERIC VLIC 
-- Virtual research environment development and operations (VRE DevOps) engineer: Maintains NaaVRE. Often, this will be an employee at LifeWatch ERIC VLIC.
-- Networked infrastructures scientist: Contribute state-of-the-art components to the NaaVRE and can publish technical papers 
-that demonstrate the relevance of NaaVRE in the field of networked systems.
+- Virtual lab development roles: Roles involved in the creation of a new virtual lab.
+  - Virtual lab owner / Principal investigator: Coordinates the development of the virtual lab with a scientific vision.
+  This will often be the golden user, i.e. the person that provides the initial publishable use case of the virtual lab. 
+  - Virtual lab core developers: Develop a new virtual lab in NaaVRE. Often the virtual lab owner will be one of the core developers. 
+  - Virtual lab code reviewers: Provide feedback during core development on the user-friendliness, maintainability, and robustness of the
+  source code and other assets.
+- Virtual lab usage roles: Roles of people who use an existing virtual lab for their own research.
+  - Virtual lab user: Researchers that couple virtual labs assets, and run their own scenarios in the virtual lab by using their own data and parameters.
+  - Virtual lab asset developer: Users who, besides coupling assets and running scenarios, expand and adapt the source code 
+  within their own copy of the virtual lab to suit their needs. In the virtual labs the distinction between development 
+  and use is a continuum. How many changes a scientist will make to the codebase and libraries depends on whether the virtual lab already has the necessary assets for the user.
+  - Virtual lab visitor: Visits the virtual lab to see how experiments were done and what is possible in the virtual lab.
+- Virtual lab support roles: Roles to support development and use of virtual labs.
+  - Virtual lab trainer: Knows the lab from a user viewpoint and provides trainings to new users.
+  - Virtual lab technical coordinator: Knows the lab from a technical perspective and pushes the lab to the next readiness level. Often, this will be an employee at LifeWatch ERIC VLIC
+  - Virtual lab service operator: Can support users. Knows the potential and limitations of the lab and can help out when problems arise.  
+  - Virtual research environment development and operations (VRE DevOps) engineer: Maintains NaaVRE. Often, this will be an employee at LifeWatch ERIC VLIC.
+  - Networked infrastructures scientist: Contribute state-of-the-art components to the NaaVRE and can publish technical papers 
+  that demonstrate the relevance of NaaVRE in the field of networked systems.
 
 ## Readiness levels
 We discern four readiness levels in the development of a virtual lab. 
@@ -58,7 +62,7 @@ with an increasing amount of independence from the virtual lab core developers a
 1. Core Development: Core development is the initial phase where all virtual labs start off. This is the beginning of the 
 development of new data processing, data analysis, or simulation tools or the conversion of legacy code from a different platform to NaaVRE.
 2. First use: The virtual lab owner uses the virtual lab to run their scenarios.
-3. Workshop use: The lab can be used by multiple workshop participants under the guidance of the virtual lab service operator. 
+3. Workshop use: The lab can be used by multiple workshop participants under the guidance of the virtual lab trainer. 
 4. Operational service: The virtual lab is ready for all scientists to create their own instance of the lab for their research.
 
 The following table gives indications of the duration, number of teams and users involved per readiness level.
@@ -67,7 +71,7 @@ The following table gives indications of the duration, number of teams and users
 |---------------------|------------|------------|----------|-----------------------|
 | Core development    | 3-6 months | 1 team     | 0        | Metadata publication  | 
 | First use           | 3 months   | 1 team     | 1        | Paper publication     |
-| Workshop use        | 3 months   | 10-25      | 10-25    |                       |
+| Workshop use        | 3 months   | 10-25      | 10-25    | Workshops             |
 | Operational service | 3 months   | infinite   | infinite |                       |
 
 ### Starting core development
@@ -162,8 +166,8 @@ The following roles should be assigned during first use:
 - Virtual lab owner / Principal investigator: Uses the virtual lab to do their research. Publishes a paper in the ecosystem domain.
 - Virtual lab core developers: Provide support to the virtual lab owner.
 - Networked infrastructures scientist: Publishes a technical paper.
-- Virtual lab service operator: Once the virtual lab owner, and reviewers believe the virtual lab to be ready to be used by others,
-the virtual lab service operator tries out the virtual lab and makes suggestions. Helps the virtual lab owner identify issues arising when others start using the virtual lab.
+- Virtual lab trainer: Once the virtual lab owner, and reviewers believe the virtual lab to be ready to be used by others,
+the virtual lab trainer tries out the virtual lab and makes suggestions. Helps the virtual lab owner identify issues arising when others start using the virtual lab.
 - VRE DevOps engineer: Support the core developers and golden user by providing advise and changing the virtual research environment where necessary.
 
 ### From first use to workshop use
@@ -203,9 +207,8 @@ Additionally, user feedback should be gathered and processed.
 #### Workshop use responsibilities
 The following responsibilities should be assigned during workshop use:
 - Virtual lab owner / Principal investigator: Gathers user feedback and determines how to facilitate other users in the virtual lab.
-- Virtual lab service operator: Gives trainings to users. Can point out what the user can change and can not change in the lab. 
-<span style="color:green">Do we want a specific trainer role?</span>
-- Virtual lab technical coordinator: Answers any technical questions arising from the workshop use which the service operator can not answer. 
+- Virtual lab trainer: Gives trainings to users. Can point out what the user can change and can not change in the lab.
+- Virtual lab technical coordinator: Answers any technical questions arising from the workshop use which the trainer can not answer. 
 Has been involved as VRE DevOps engineer during the previous stages.
 
 ### From workshop use to operational service
@@ -230,8 +233,8 @@ they can contact LifeWatch to discuss the possibilities of creating a new virtua
 #### Operational service responsibilities
 The following responsibilities should be assigned when the virtual lab is an operational service:
 - Virtual lab owner / Principal investigator: Coordinates the further development of the virtual lab with a scientific vision. 
+- Virtual lab service operator: Is the primary point of contact in case any problems arise with the virtual lab.
 - Virtual lab technical coordinator: Ensures the VRE keeps supporting the virtual lab.
-- Virtual lab service operations: Is the primary point of contact in case any problems arise with the virtual lab. <span style="color:green">Do we want a specific trainer role?</span>  
 
 ![ NaaVRE_development_cycle.png not found](NaaVRE_development_cycle.png)  
 Figure1: The virtual lab moves through the readiness levels, from core development to operational service. Users coming up with ideas for new experiments that do not fit in the virtual lab, 
