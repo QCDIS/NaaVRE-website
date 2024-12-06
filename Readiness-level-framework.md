@@ -45,8 +45,8 @@ within their own copy of the virtual lab to suit their needs. In the virtual lab
 and use is a continuum. How many changes a scientist will make to the codebase and libraries depends on whether the virtual lab already has the necessary assets for the user.
 - Virtual lab visitor: Visits the virtual lab to see how experiments were done and what is possible in the virtual lab.
 - Virtual lab service operator: Can support users. Knows the lab and can help out when problems arise. <span style="color:green">Do we want a specific trainer role? My current assumption is that this person will give the trainings</span>  
-- Virtual lab technical coordinator: Employee at LifeWatch VLIC who knows the lab from a technical perspective and pushes the lab to the next readiness level. 
-- Virtual research environment development and operations (VRE DevOps) engineer: Employees at LifeWatch VLIC who create and maintain NaaVRE.
+- Virtual lab technical coordinator: Knows the lab from a technical perspective and pushes the lab to the next readiness level. Often, this will be an employee at LifeWatch ERIC VLIC 
+- Virtual research environment development and operations (VRE DevOps) engineer: Maintains NaaVRE. Often, this will be an employee at LifeWatch ERIC VLIC.
 - Networked infrastructures scientist: Contribute state-of-the-art components to the NaaVRE and can publish technical papers 
 that demonstrate the relevance of NaaVRE in the field of networked systems.
 
