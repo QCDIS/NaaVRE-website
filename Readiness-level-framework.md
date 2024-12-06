@@ -16,20 +16,22 @@ This readiness level framework assists researchers in building virtual labs by:
 - Describing the progression of a virtual lab through readiness levels, highlighting requirements, milestones and responsibilities.
 
 ## Content of a virtual lab
-A virtual lab can contain four types of assets <span style="color:green">(Should we choose between the terms: resource & asset? Nanohub uses “resource”. Maybe we should discuss this with domain scientists)</span>:
-- The codebase: Any code written for the virtual lab.
-- Libraries: Code used by the codebase, but not written for the virtual lab.
-- Data: Stored data that is produced by data processing, data analysis, and simulations in NaaVRE.
-- Containerized cells and workflows.    
+A virtual lab is a collection of items researchers need to conduct their experiments: 
+- Assets created in the virtual lab. 
+- Documents that support the usability of the virtual lab.
 
-Besides assets, we encourage the creators of a virtual lab to support the usability of the assets, by providing documents:
+Three types of assets can be created in a virtual lab:
+- The codebase: Any code written for the virtual lab. The codebase interacts with external resources such as software libraries and external data.
+- Internal data: Produced in the virtual lab by data processing, data analysis, and simulations.
+- Containerized cells and workflows.
+
+Besides assets, we encourage the developers of a virtual lab to create documents that aid the FAIRness and maintenance of the virtual lab:
 - Metadata.
 - Documentation, including a tutorial.
-- Software management plan <span style="color:green">(Do we need a virtual lab to specify who is planning to upkeep the virtual lab? Shall we focus on getting a readiness level framework which mentions a software management plan, and work out the details of what should be in the software management plan later? I think a software management plan belongs to a readiness level which no lab will currently reach.)</span>
 
 ## Virtual lab roles
 NaaVRE aims to be a virtual research environment (VRE) that enables experts in computational ecology and ecological data analysis
-to create virtual labs in which users conduct their research.
+to create virtual labs.
 Our platform needs contributions from the multiple roles to enable innovative research methods. Some people will only have 
 one role for the virtual lab, while others might have multiple of the following roles:
 - Virtual lab owner / Principal investigator: Coordinates the development of the virtual lab with a scientific vision.
@@ -90,6 +92,8 @@ Where possible, do the following while building the virtual lab:
 - Versioning
   - Pin versions of used software and libraries in the dependencies to prevent compatibility problems when updates occur to the packages and software.                                                                                                                                                                                              
 - Start each cell in the notebook with a title.
+- Data
+  - Store data that is only read by the virtual lab in an external catalogue and use an API to access this data.
 - Parallelization
   - Parallelize the execution of the parts of the code where this is useful. A tutorial is available [here](https://github.com/QCDIS/lifewatch-notebooks/blob/main/NaaVRE-tutorials/splitting-classic.ipynb).
 - Documentation
