@@ -1,8 +1,6 @@
 # Readiness level framework for virtual labs in NaaVRE
 
-This draft version contains some revision questions, which are marked in <span style="color:green">green</span>.
-
-Version 1.0.0
+Version 0.0.0
 
 NaaVRE facilitates data processing, data analysis, and simulation by enabling scientists to create their own virtual labs.
 A collaborative effort between ecosystem specialists, computational scientists, data scientists, and development and operations engineers 
@@ -79,7 +77,7 @@ We recommend to start the creation of a new virtual lab by doing the following:
 - Version control
   - Store the codebase on a repository with version control (e.g. git).
 - Security
-  - Make sure personal tokens for APIs do not end up in version control. ToDo Vlic: Guideline for secret management https://github.com/QCDIS/projects_overview/issues/276
+  - Make sure personal tokens for APIs do not end up in version control. ToDo VLIC: Guideline for secret management [#276](https://github.com/QCDIS/projects_overview/issues/276).
 - Licensing
   - Choose a license for the virtual lab. We recommend using the [Apache license 2.0](https://choosealicense.com/licenses/apache-2.0/), 
 assuming this is compatible with the other packages and software you use in the virtual lab. If the Apache License 2.0 is incompatible with software or libraries used, 
@@ -87,9 +85,8 @@ you can pick another license. We recommend having a look at https://choosealicen
 - Documentation
   - Pick a nice name for your virtual lab. Make sure the name won't be mixed up with other virtual labs.
   - Publish virtual lab metadata outside the virtual lab. This will allow others to be aware of the context of the virtual lab from an early stage.
-<span style="color:green">ToDo: Check if we have a single preferred metadata catalogue</span>.
     - Track the metadata with version control, such that the changes to metadata can be viewed by virtual lab users.
-    - <span style="color:green">ToDo VLIC: Choose a metadata standard. </span>
+    - Currently, we are choosing a default metadata catalogue. See issue [#275](https://github.com/QCDIS/projects_overview/issues/275).
  
 ### During core development
 Where possible, do the following while building the virtual lab:
@@ -145,7 +142,8 @@ Besides running scenarios in the virtual lab, the following should be done per c
   - Make sure and describe how the virtual lab can be used on different scenarios.
 - Versioning
   - Add a version number to the virtual lab so users can refer to this number when they are reporting reproducibility or bug issues. 
-  - Give each containerized cell a persistent identifier and version number <span style="color:green">(This is currently not a feature in NaaVRE. But might become possible in the future. Added to [potential ToDos](#potential-todos-for-lifewatch-vlic))</span>
+  - Give each containerized cell and executed workflow a persistent identifier and version number. 
+  Feature is currently under development. For progress, see [#280](https://github.com/QCDIS/projects_overview/issues/280).
 - Documentation
   - Create a [user manual](#User-manual) for the virtual lab.
 - Metadata
@@ -182,7 +180,7 @@ The coding experience of the reviewer of the user manual is similar to the codin
   - How to use the virtual lab on a different scenario is explained.
 - Codebase
   - Unit tests verify the behavior of used methods and libraries. There should be a testing guideline, which will be done in this issue [\#274](https://github.com/QCDIS/projects_overview/issues/274).
-  - The virtual lab reads, writes and exchanges data in a way that meets domain-relevant community standards. [5] <span style="color:green">I think we will need to consult some ecologists to determine these standards. I aditionally emailed Nafiseh. </span>                                                                                                                                                                                                                                                                                                         
+  - The virtual lab reads, writes and exchanges data in a way that meets domain-relevant community standards. Recommendations for what standards to use are under investigation, see github issue [#281](https://github.com/QCDIS/projects_overview/issues/281).                                                                                                                                                                                                                                                                                                         
   - The code within cells is easily human-readable and others can easily modify it. If methods have side effects, this is clear to the user.
   - The input and output of each cell is clear. It is both clear what the structure is (e.g. what data type is used) and what the data content is from a domain perspective.
 - Workflow
@@ -238,8 +236,7 @@ The following responsibilities should be assigned when the virtual lab is an ope
 
 ![ NaaVRE_development_cycle.png not found](images/NaaVRE_development_cycle.png)  
 Figure1: The virtual lab moves through the readiness levels, from core development to operational service. Users coming up with ideas for new experiments that do not fit in the virtual lab, 
-can in collaboration with LifeWatch create a new virtual lab that fits their needs.  
-<span style="color:green">Should we use the virtual lab logo instead of the NaaVRE logo? So the Erlenmeyer, beaker and cloud?</span>
+can in collaboration with LifeWatch create a new virtual lab that fits their needs.
 
 ### User manual
 The following guidelines can be used to determine the completeness of a user manual.
@@ -264,9 +261,10 @@ The following guidelines can be used to determine the completeness of a user man
 - These recommendations are partially based on ideas presented in the paper [Introducing the FAIR Principles for research software](https://www.nature.com/articles/s41597-022-01710-x), the [Fair software checklist](https://fairsoftwarechecklist.net/v0.2/), and [fair-software.eu](https://fair-software.eu/recommendations/license).
 
 ## Potential ToDos for LifeWatch VLIC
-To be able to cycle through the entire readiness cycle described here, LifeWatch VLIC needs to finish the following: 
+To be able to cycle through the entire readiness cycle described here, LifeWatch VLIC needs to provide the following: 
 - Make NaaVRE generate a persistent identifier and version number for containerized cells and executed workflows. https://github.com/QCDIS/projects_overview/issues/280
 - Choose a metadata standard for Virtual labs.  https://github.com/QCDIS/projects_overview/issues/275
+- Create recommendations on community standards for reading, writing and exchanging data in virtual labs. See github issue [#281](https://github.com/QCDIS/projects_overview/issues/281)
 - Create recommendations for testing: https://github.com/QCDIS/projects_overview/issues/274
 - Guideline for secret management https://github.com/QCDIS/projects_overview/issues/276
 - Determine a way of structuring files in a virtual lab git repository that allows publication of the user manual and documentation on NaaVRE.net.  https://github.com/QCDIS/projects_overview/issues/279
