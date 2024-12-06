@@ -101,7 +101,7 @@ Where possible, do the following while building the virtual lab:
     - Track the documentation with version control.
 
 #### Core development responsibilities
-The following roles are involved during this phase:
+The following roles should be assigned during core development:
 - Virtual lab owner / Principal investigator: Provides the use case that will be the first application of the virtual lab. 
 Guides the development of the lab from the scientific viewpoint. 
 - Virtual lab core developers: One or multiple core developers create a new virtual lab in NaaVRE.
@@ -158,7 +158,7 @@ Two papers should be published:
 Additionally the virtual lab should be made publicly available.
 
 #### First use responsibilities
-The following roles have a responsibility in this phase:
+The following roles should be assigned during first use:
 - Virtual lab owner / Principal investigator: Uses the virtual lab to do their research. Publishes a paper in the ecosystem domain.
 - Virtual lab core developers: Provide support to the virtual lab owner.
 - Networked infrastructures scientist: Publishes a technical paper.
@@ -201,7 +201,7 @@ In this phase at least one workshop should be given to a group of 10 to 25 poten
 Additionally, user feedback should be gathered and processed.
 
 #### Workshop use responsibilities
-The following responsibilities apply during this phase:
+The following responsibilities should be assigned during workshop use:
 - Virtual lab owner / Principal investigator: Gathers user feedback and determines how to facilitate other users in the virtual lab.
 - Virtual lab service operator: Gives trainings to users. Can point out what the user can change and can not change in the lab. 
 <span style="color:green">Do we want a specific trainer role?</span>
@@ -228,7 +228,7 @@ Whenever users of the virtual lab come up with a new idea that does not fit in t
 they can contact LifeWatch to discuss the possibilities of creating a new virtual lab.
 
 #### Operational service responsibilities
-The following responsibilities apply during this phase:
+The following responsibilities should be assigned when the virtual lab is an operational service:
 - Virtual lab owner / Principal investigator: Coordinates the further development of the virtual lab with a scientific vision. 
 - Virtual lab technical coordinator: Ensures the VRE keeps supporting the virtual lab.
 - Virtual lab service operations: Is the primary point of contact in case any problems arise with the virtual lab. <span style="color:green">Do we want a specific trainer role?</span>  
