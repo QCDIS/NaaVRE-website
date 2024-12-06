@@ -256,9 +256,9 @@ The following guidelines can be used to determine the completeness of a user man
 - Known potential pitfalls in using the virtual lab are described.
 - There is a description of the standards used for data exchange with application programming interfaces and databases.
 - Storage location 
-  - The description of the virtual lab from the viewpoints is stored on [NaaVRE.net](https://naavre.net/). A visitor needs to be able to 
-get an intuitive understanding of what happens in the virtual lab without having to open it.
-  - Parts of the documentation which are only related to a single notebook can be stored in that notebook.
+  - Store the user manual for the virtual lab in the same git repository as the virtual lab assets.
+  - The user manual will be made available on [NaaVRE.net](https://naavre.net/) and should be separated from the codebase.
+  - Instructions on how to use a single notebook can be stored in the markdown of that notebook.
 
 ## Sources
 - These recommendations are partially based on ideas presented in the paper [Introducing the FAIR Principles for research software](https://www.nature.com/articles/s41597-022-01710-x), the [Fair software checklist](https://fairsoftwarechecklist.net/v0.2/), and [fair-software.eu](https://fair-software.eu/recommendations/license).
@@ -270,6 +270,7 @@ To be able to cycle through the entire readiness cycle described here, LifeWatch
 - Choose a metadata standard for Virtual labs.  https://github.com/QCDIS/projects_overview/issues/275
 - Create recommendations for testing: https://github.com/QCDIS/projects_overview/issues/274
 - Guideline for secret management https://github.com/QCDIS/projects_overview/issues/276
+- Determine a way of structuring files in a virtual lab git repository that allows publication of the user manual and documentation on NaaVRE.net.  https://github.com/QCDIS/projects_overview/issues/279
 
 ## Feedback
 Any feedback on this document is appreciated. Please contact the LifeWatch VLIC team if you have any questions or comments on the document.
