@@ -175,7 +175,7 @@ The virtual lab is ready for workshop use, if it meets the criteria for first us
 - Metadata
   - All the fields of the metadata standard are present. 
 - Scenarios
-  - The virtual lab can be used in multiple scenarios.
+  - The virtual lab can be used in multiple scenarios, i.e. both the parameters and datasets can be changed to suit experiments of different researchers.
 - Documentation
   - At least one domain scientist who was not involved in the development of the virtual lab has reviewed the user manual. 
 The coding experience of the reviewer of the user manual is similar to the coding experience of the intended user.
@@ -236,7 +236,7 @@ The following responsibilities should be assigned when the virtual lab is an ope
 - Virtual lab service operator: Is the primary point of contact in case any problems arise with the virtual lab.
 - Virtual lab technical coordinator: Ensures the VRE keeps supporting the virtual lab.
 
-![ NaaVRE_development_cycle.png not found](NaaVRE_development_cycle.png)  
+![ NaaVRE_development_cycle.png not found](images/NaaVRE_development_cycle.png)  
 Figure1: The virtual lab moves through the readiness levels, from core development to operational service. Users coming up with ideas for new experiments that do not fit in the virtual lab, 
 can in collaboration with LifeWatch create a new virtual lab that fits their needs.  
 <span style="color:green">Should we use the virtual lab logo instead of the NaaVRE logo? So the Erlenmeyer, beaker and cloud?</span>
