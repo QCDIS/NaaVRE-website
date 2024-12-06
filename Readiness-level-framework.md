@@ -265,8 +265,7 @@ The following guidelines can be used to determine the completeness of a user man
 
 ## Potential ToDos for LifeWatch VLIC
 To be able to cycle through the entire readiness cycle described here, LifeWatch VLIC needs to finish the following: 
-- Make NaaVRE generate a persistent identifier and version number for containerized cells. See [Containerized cells and Workflow](#containerized-cells-and-workflow).
-- Software management plan: Shall we focus on getting a readiness level framework which mentions a software management plan, and work out the details of what should be in the [software management plan](https://zenodo.org/records/7248877) later?
+- Make NaaVRE generate a persistent identifier and version number for containerized cells and executed workflows. https://github.com/QCDIS/projects_overview/issues/280
 - Choose a metadata standard for Virtual labs.  https://github.com/QCDIS/projects_overview/issues/275
 - Create recommendations for testing: https://github.com/QCDIS/projects_overview/issues/274
 - Guideline for secret management https://github.com/QCDIS/projects_overview/issues/276
