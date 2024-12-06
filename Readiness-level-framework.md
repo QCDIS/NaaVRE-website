@@ -47,7 +47,7 @@ one role for the virtual lab, while others might have multiple of the following 
   and use is a continuum. How many changes a scientist will make to the codebase and libraries depends on whether the virtual lab already has the necessary assets for the user.
   - Virtual lab visitor: Visits the virtual lab to see how experiments were done and what is possible in the virtual lab.
 - Virtual lab support roles: Roles to support development and use of virtual labs.
-  - Virtual lab trainer: Knows the lab from a user viewpoint and provides trainings to new users.
+  - Virtual lab trainer: Knows the lab from a user viewpoint and provides trainings to new users. This role will often be assigned to a person who is also the virtual lab owner, a core developer, or service operator. 
   - Virtual lab technical coordinator: Knows the lab from a technical perspective and pushes the lab to the next readiness level. Often, this will be an employee at LifeWatch ERIC VLIC
   - Virtual lab service operator: Can support users. Knows the potential and limitations of the lab and can help out when problems arise.  
   - Virtual research environment development and operations (VRE DevOps) engineer: Maintains NaaVRE. Often, this will be an employee at LifeWatch ERIC VLIC.
@@ -65,14 +65,14 @@ development of new data processing, data analysis, or simulation tools or the co
 3. Workshop use: The lab can be used by multiple workshop participants under the guidance of the virtual lab trainer. 
 4. Operational service: The virtual lab is ready for all scientists to create their own instance of the lab for their research.
 
-The following table gives indications of the duration, number of teams and users involved per readiness level.
+The following table gives indications of the duration, number of developers and users involved per readiness level.
 
-| Readiness level     | Duration   | Developers | Users    | Context dissemination | 
-|---------------------|------------|------------|----------|-----------------------|
-| Core development    | 3-6 months | 1 team     | 0        | Metadata publication  | 
-| First use           | 3 months   | 1 team     | 1        | Paper publication     |
-| Workshop use        | 3 months   | 10-25      | 10-25    | Workshops             |
-| Operational service | 3 months   | infinite   | infinite |                       |
+| Readiness level     | Duration   | Developers                  | Users | Context dissemination | 
+|---------------------|------------|-----------------------------|-------|-----------------------|
+| Core development    | 3-6 months | the core development team   | 0     | Metadata publication  | 
+| First use           | 3 months   | the core development team   | 1     | Paper publication     |
+| Workshop use        | 3 months   | 10-25 workshop participants | 10-25 | Workshops             |
+| Operational service |            | 10 ≤ asset developers       | ≥ 10  |                       |
 
 ### Starting core development
 We recommend to start the creation of a new virtual lab by doing the following:
