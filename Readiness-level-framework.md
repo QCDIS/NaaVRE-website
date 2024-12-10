@@ -53,28 +53,28 @@ one role for the virtual lab, while others might have multiple of the following 
   that demonstrate the relevance of NaaVRE in the field of networked systems.
 
 ## Readiness levels
-We discern four readiness levels in the development of a virtual lab. 
+We discern five readiness levels in the development of a virtual lab. 
 For each higher readiness level improvements are be made to the assets and documents in order to make the lab usable by others 
 with an increasing amount of independence from the virtual lab core developers and VRE DevOps team.
 
-1. Conceptual proposal: A researcher pitches an idea to the NaaVRE DevOps team. Plans are made to create a virtual lab.
-2. co-development:  Co-development is the initial phase where all virtual labs start off. This is the beginning of the 
-development of new data processing, data analysis, or simulation tools or the conversion of legacy code from a different platform to NaaVRE.
-2. Validation: The virtual lab owner uses the virtual lab to run their scenarios.
-3. Workshop use: The lab can be used by multiple workshop, training, and hackathon participants under the guidance of the virtual lab trainer. 
-4. Operational service: The virtual lab is ready for all scientists to create their own instance of the lab for their research.
+- L0 - Conceptual proposal: A researcher pitches an idea to the NaaVRE DevOps team. Plans are made to create a virtual lab.  
+- L1 - Co-development:  Co-development is the initial phase where all virtual labs start off. This is the beginning of the 
+development of new data processing, data analysis, or simulation tools or the conversion of legacy code from a different platform to NaaVRE. 
+- L2 - Validation: The virtual lab owner uses the virtual lab to run their scenarios. 
+- L3 - Workshop use: The lab can be used by multiple workshop, training, and hackathon participants under the guidance of the virtual lab trainer. 
+- L4 - Operational service: The virtual lab is ready for all scientists to create their own instance of the lab for their research.
 
-The following table gives indications of the duration, number of developers and users involved per readiness level.
+|    | Name                | Duration    | Developers                  | Users | Context dissemination            | Entering condition                                                     | Exit condition                                                                     | 
+|----|---------------------|-------------|-----------------------------|-------|----------------------------------|------------------------------------------------------------------------|------------------------------------------------------------------------------------|
+| L0 | Conceptual proposal | 1-12 months | 0                           | 0     |                                  | A good idea & Available resources.                                     | Set up a concrete lab on the platform.                                             |
+| L1 | Co-development      | 3-6 months  | A team of core developers   | 0     | Metadata publication             | A lab & a core development team.                                       | A lab ready for scientific experiments.                                            | 
+| L2 | Validation phase    | 3 months    | A team of core developers   | 1     | Paper publication                | A lab ready for writing a scientific paper.                            | One or two papers submitted to publication.                                        |                              
+| L3 | Workshop use        | 3 months    | 10-25 workshop participants | 10-25 | Workshops, trainings, hackathons | A working lab with documentation and training material.                | The lab has been tested in workshops / hackathons, and has an emerging  community. |
+| L4 | Operational service |             | 10 ≤ asset developers       | 10+   |                                  | The lab is operational, and can be managed on research infrastructure. |                                                                                    |
+Table 1: Summary of readiness levels, with duration, number of developers and users, 
+how the context of the lab is communicated with the outside world, and what conditions per transition should be met. 
 
-|    | Name                | Duration    | Developers                   | Users | Context dissemination | 
-|----|---------------------|-------------|------------------------------|-------|-----------------------|
-| L0 | Conceptual proposal | 1-12 months | 0                            | 0     |                       |
-| L1 | Co-development      | 3-6 months  | The team of core developers  | 0     | Metadata publication  | 
-| L2 | Validation phase    | 3 months    | The team of core developers  | 1     | Paper publication     |
-| L3 | Workshop use        | 3 months    | 10-25 workshop participants  | 10-25 | Workshops             |
-| L4 | Operational service |             | 10 ≤ asset developers        | ≥ 10  |                       |
-
-![ NaaVRE_development_cycle.png not found](images/NaaVRE_development_cycle.drawio.png)   
+![ images/NaaVRE_development_cycle.drawio.png not found](images/NaaVRE_development_cycle.drawio.png)   
 Figure1: The virtual lab moves through the readiness levels, from conceptual proposal to operational service. 
 Users coming up with ideas for new experiments that can not be done in the existing virtual labs, 
 can, in collaboration with LifeWatch, create a new virtual lab that fits their needs.
@@ -85,7 +85,7 @@ If a NaaVRE virtual lab seems the best platform to conduct the research,
 the domain scientist and NaaVRE DevOps team work out the idea further, recruit a team of core developers, 
 and establish a timeline for the virtual lab. 
 
-### Starting co-development
+### From conceptual proposal to co-development
 We recommend to start the development of a new virtual lab by doing the following:
 - Version control
   - Store the codebase on a repository with version control (e.g. git).
