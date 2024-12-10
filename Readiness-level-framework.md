@@ -78,13 +78,13 @@ Figure1: The virtual lab moves through the readiness levels, from conceptual pro
 Users coming up with ideas for new experiments that can not be done in the existing virtual labs, 
 can, in collaboration with LifeWatch, create a new virtual lab that fits their needs.
 
-### As a conceptual proposal
+### L0 - Conceptual proposal
 The idea of a new virtual lab is spawned by a domain scientist. They pitch the idea to the NaaVRE DevOps team. 
 If a NaaVRE virtual lab seems the best platform to conduct the research,
 the domain scientist and NaaVRE DevOps team work out the idea further, recruit a team of core developers, 
 and establish a timeline for the virtual lab. 
 
-### During the conceptual proposal phase 
+#### During the conceptual proposal phase 
 The following things should be done to work out the conceptual proposal to a concrete virtual lab:
 - Feasibility
   - Checking if the idea is feasible to be done in NaaVRE.
@@ -106,13 +106,13 @@ you can pick another license. We recommend having a look at https://choosealicen
     - Tracking the metadata with version control, such that the changes to metadata can be viewed by virtual lab users.
     - Currently, we are choosing a default metadata catalogue. For progress, see issue [#275](https://github.com/QCDIS/projects_overview/issues/275).
 
-### Conceptual proposal responsibilities
+#### Conceptual proposal responsibilities
 The following roles are involved in a conceptual proposal:
 - Virtual lab owner / Principal investigator: Comes with a use case that will serve as the first application of the virtual lab.
 Recruits a core development team.
 - VRE DevOps engineer: Establish if NaaVRE can support to use case. Create an empty new virtual lab.
 
-### From conceptual proposal to co-development
+#### From conceptual proposal to co-development
 To transition from conceptual proposal to co-development the following should be done:
 - Timeline
   -[ ] A timeline exists for the co-development, validation of the virtual lab and development of training material.
@@ -128,6 +128,8 @@ To transition from conceptual proposal to co-development the following should be
   -[ ] The virtual lab has a nice name.
   -[ ] The virtual lab metadata is available outside the virtual lab.
     -[ ] Metadata is tracked by version control.
+
+## L1 - Co-development
 
 ### During co-development
 Where possible, do the following while building the virtual lab:
@@ -173,6 +175,8 @@ Currently, you can verify this by manually executing all cells in the notebook o
 - Workflow execution
   -[ ] The containerized cells can run without any modifications.
 
+## L2 - Validation phase
+
 ### During the validation phase
 Besides running scenarios in the virtual lab, the following should be done per category during the validation phase:
 - Data
@@ -194,14 +198,14 @@ Besides running scenarios in the virtual lab, the following should be done per c
   - Add unit tests to verify the behavior of used methods and libraries.
   - Define clear responsibilities of all notebook cells, methods and classes.
 
-#### Validation phase milestones
+### Validation phase milestones
 Two papers should be published:
 1. A paper in the ecosystem domain presenting the scenarios run in the virtual lab.
 2. A technical paper.  
 
 Additionally the virtual lab should be made publicly available.
 
-#### Validation phase responsibilities
+### Validation phase responsibilities
 The following roles should be assigned during the validation phase:
 - Virtual lab owner / Principal investigator: Uses the virtual lab to do their research. Publishes a paper in the ecosystem domain.
 - Virtual lab core developers: Provide support to the virtual lab owner.
@@ -235,6 +239,8 @@ The coding experience of the reviewer of the user manual is similar to the codin
     -[ ]  The random access memory and permanent storage usage of the virtual lab are known. 
     -[ ]  The amount of processors the virtual lab uses is known.
 
+## L3 - Workshop use
+
 ### During workshop use
 The following should be done during workshop use:
 - Documentation
@@ -242,11 +248,11 @@ The following should be done during workshop use:
 - Codebase
   - Find out if the architecture of the virtual lab is understandable and maintainable.
 
-#### Workshop use milestone
+### Workshop use milestone
 In this phase at least one workshop should be given to a group of 10 to 25 potential users. 
 Additionally, user feedback should be gathered and processed.
 
-#### Workshop use responsibilities
+### Workshop use responsibilities
 The following responsibilities should be assigned during workshop use:
 - Virtual lab owner / Principal investigator: Gathers user feedback and determines how to facilitate other users in the virtual lab.
 - Virtual lab trainer: Gives trainings to users. Can point out what the user can change and can not change in the lab.
@@ -261,12 +267,14 @@ but should be duplicated in the metadata such that a person can in theory also r
 - Deployment
   - [ ] Deploy the virtual lab on MyLifeWatch.
 
+## L4 - Operational service
+
 ### During operational service
 The following should be done during operational service:
 - Expand and adapt the virtual lab where useful or necessary.
 - Make the containerized cells and workflow interoperable with other systems where use cases for the interoperability between NaaVRE and another system arise.
 
-#### Operational service milestones
+### Operational service milestones
 The following milestones can occur when a virtual lab runs as an operational service:
 - Users of the virtual lab successfully run their own scenarios in the virtual lab.
 - Virtual lab developers make their own modifications to the virtual lab to facilitate their research.
@@ -274,13 +282,13 @@ The following milestones can occur when a virtual lab runs as an operational ser
 Whenever users of the virtual lab come up with a new idea that does not fit in the possibilities of existing virtual labs, 
 they can contact LifeWatch to discuss the possibilities of creating a new virtual lab.
 
-#### Operational service responsibilities
+### Operational service responsibilities
 The following responsibilities should be assigned when the virtual lab is an operational service:
 - Virtual lab owner / Principal investigator: Coordinates the further development of the virtual lab with a scientific vision. 
 - Virtual lab service operator: Is the primary point of contact in case any problems arise with the virtual lab.
 - Virtual lab technical coordinator: Ensures the VRE keeps supporting the virtual lab.
 
-### User manual
+## User manual
 The following guidelines can be used to determine the completeness of a user manual.
 - The virtual lab is explained from the following viewpoints:
   - A conceptual viewpoint. There is an intuitive description of what happens.
