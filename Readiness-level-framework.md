@@ -1,6 +1,6 @@
 # Readiness level framework for virtual labs in NaaVRE
 
-Version 0.0.0
+Version 0.0.1
 
 NaaVRE facilitates data processing, data analysis, and simulation by enabling scientists to create their own virtual labs.
 A collaborative effort between ecosystem specialists, computational scientists, data scientists, and development and operations engineers 
@@ -57,10 +57,10 @@ We discern five readiness levels in the development of a virtual lab.
 For each higher readiness level improvements are be made to the assets and documents in order to make the lab usable by others 
 with an increasing amount of independence from the virtual lab core developers and VRE DevOps team.
 
-- L0 - Conceptual proposal: A researcher pitches an idea to the NaaVRE DevOps team. Plans are made to create a virtual lab.  
-- L1 - Co-development: This is the beginning of the development of new data processing, data analysis, or simulation tools or the conversion of legacy code from a different platform to NaaVRE. 
-- L2 - Validation: The virtual lab owner uses the virtual lab to run their scenarios. 
-- L3 - Workshop use: The lab can be used by multiple workshop, training, and hackathon participants under the guidance of the virtual lab trainer. 
+- L0 - Conceptual proposal: A researcher pitches an idea to the NaaVRE DevOps team. Plans are made to create a new virtual lab.  
+- L1 - Co-development: This is the beginning of the development of new data processing, data analysis, or simulation tools in NaaVRE or the conversion of legacy code from a different platform to NaaVRE. 
+- L2 - Validation: The virtual lab owner uses the virtual lab to run their scientific scenarios to publish a paper. 
+- L3 - Workshop use: The lab can be used by multiple participants in a workshop, training, or hackathon under the guidance of the virtual lab trainer. 
 - L4 - Operational service: The virtual lab is ready for all scientists to create their own instance of the lab for their research.
 
 |    | Name                | Duration    | Developers                  | Users | Context dissemination            | Entering condition                                                     | Exit condition                                                                     | 
@@ -207,11 +207,11 @@ Besides running scenarios in the virtual lab, the following should be done per c
   - Define clear responsibilities of all notebook cells, methods and classes.
 
 ### Validation phase milestones
-The publication of one or two papers:
+The submission for publication of one or two papers:
 1. A paper in the ecosystem domain presenting the scenarios run in the virtual lab.
-2. A technical paper.  
+2. A technical paper focusing on the infrastructure part of the virtual research environment.
 
-Additionally the virtual lab should be made publicly available.
+Additionally, the virtual lab should be made publicly available.
 
 ### Validation phase responsibilities
 The following roles should be assigned during the validation phase:
@@ -241,6 +241,8 @@ The coding experience of the reviewer of the user manual is similar to the codin
   -[ ]  The input and output of each cell is clear. It is both clear what the structure is (e.g. what data type is used) and what the data content is from a domain perspective.
 - Workflow
   -[ ]  The duration of computation, memory usage, and power usage of the containers is acceptable. As there is currently no dashboard to monitor resource usage, contact the VLIC team for guidelines.
+- Deployment
+  -[ ] The virtual lab is publicly available. 
 - Infrastructure
   -[ ]  The infrastructure requirements for the workshop are known and the necessary infrastructure has been provided:
     -[ ]  The number of people taking part in a workshop.
