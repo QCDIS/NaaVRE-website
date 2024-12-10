@@ -86,20 +86,20 @@ you can pick another license. We recommend having a look at https://choosealicen
   - Pick a nice name for your virtual lab. Make sure the name won't be mixed up with other virtual labs.
   - Publish virtual lab metadata outside the virtual lab. This will allow others to be aware of the context of the virtual lab from an early stage.
     - Track the metadata with version control, such that the changes to metadata can be viewed by virtual lab users.
-    - Currently, we are choosing a default metadata catalogue. See issue [#275](https://github.com/QCDIS/projects_overview/issues/275).
+    - Currently, we are choosing a default metadata catalogue. For progress, see issue [#275](https://github.com/QCDIS/projects_overview/issues/275).
  
 ### During core development
 Where possible, do the following while building the virtual lab:
 - Versioning
-  - Pin versions of used software and libraries in the dependencies to prevent compatibility problems when updates occur to the packages and software.                                                                                                                                                                                              
-- Start each cell in the notebook with a title.
+  - Pin versions of used software and libraries in the dependencies to prevent compatibility problems when updates occur to the packages and software.
 - Data
   - Store data that is only read by the virtual lab in an external catalogue and use an API to access this data.
 - Parallelization
   - Parallelize the execution of the parts of the code where this is useful. A tutorial is available [here](https://github.com/QCDIS/lifewatch-notebooks/blob/main/NaaVRE-tutorials/splitting-classic.ipynb).
 - Documentation
-  - Create documentation for the virtual lab.
+  - Create a directory for documentation of the virtual lab.
     - Track the documentation with version control.
+  - Start each cell in a notebook with a title.
 
 #### Core development responsibilities
 The following roles should be assigned during core development:
@@ -115,39 +115,43 @@ by giving the core development team advice and changing the virtual research env
 The milestone to reach during core development is a demonstration of a running the workflow in the virtual lab.
 
 ### From core development to first use
-A usability study should be done to determine if the lab is ready for its first use. The usability study should look at least at the following criteria:
+To transition from core development to first use, a usability study should be done. 
+The usability study should consider at least the following criteria:
 - Security
-  - Personal tokens are not tracked by version control.
+  -[ ] Personal tokens are not tracked by version control.
 - Licensing
-  - The virtual lab has a license.
+  -[ ] The virtual lab has a license.
 - Versioning
-  - Versions of used software and libraries are pinned. 
+  -[ ] Versions of used software and libraries are pinned. 
 - Metadata
-  - The metadata of the virtual lab is published.
+  -[ ] The metadata of the virtual lab is published.
 - Codebase
-  - The code executes without errors: The code can be executed without errors. 
+  -[ ] The code executes without errors: The code can be executed without errors. 
 Currently, you can verify this by manually executing all cells in the notebook on a machine on which the code was not developed (to ensure no references are made to local resources).
-  - The responsibility of each cell in the notebook is clear and can be described in a single sentence.
-- Parallel processing is applied where suitable.
+  -[ ] The responsibility of each cell in the notebook is clear and can be described in a single sentence.
+  -[ ] Parallel processing is applied where suitable.
 - Containerization
-  - The notebook cells can be containerized.
+  -[ ] The notebook cells can be containerized.
 - Workflow execution
-  - The containerized cells can run without any modifications.
+  -[ ] The containerized cells can run without any modifications.
 
 ### During first use
 Besides running scenarios in the virtual lab, the following should be done per category during first use:
 - Data
   - Make data fair.
+  - Follow the community standards of the relevant domains for reading, writing and exchanging data. 
+- Metadata
+  - Complete all metadata fields
 - Scenarios
-  - Make sure and describe how the virtual lab can be used on different scenarios.
+  - Make sure and describe how the virtual lab can be used on different scenarios, i.e. other datasets and with other parameters.
 - Versioning
   - Add a version number to the virtual lab so users can refer to this number when they are reporting reproducibility or bug issues. 
   - Give each containerized cell and executed workflow a persistent identifier and version number. 
   Feature is currently under development. For progress, see [#280](https://github.com/QCDIS/projects_overview/issues/280).
 - Documentation
   - Create a [user manual](#User-manual) for the virtual lab.
-- Metadata
-  - Complete all metadata fields
+- Workflow
+  - Check the duration of computation, memory usage, and power usage of the containers.  
 - Codebase
   - Add unit tests to verify the behavior of used methods and libraries.
   - Define clear responsibilities of all notebook cells, methods and classes.
@@ -169,27 +173,29 @@ the virtual lab trainer tries out the virtual lab and makes suggestions. Helps t
 - VRE DevOps engineer: Support the core developers and golden user by providing advise and changing the virtual research environment where necessary.
 
 ### From first use to workshop use
-The virtual lab is ready for workshop use, if it meets the criteria for first use, and additionally meets the following requirements:
+The virtual lab can transition to workshop use, if it meets the criteria for first use, and additionally meets the following requirements:
+- Data
+  - [ ] All input data of the lab is FAIR.
 - Metadata
-  - All the fields of the metadata standard are present. 
+  -[ ] All the fields of the metadata standard are present. 
 - Scenarios
-  - The virtual lab can be used in multiple scenarios, i.e. both the parameters and datasets can be changed to suit experiments of different researchers.
+  -[ ] The virtual lab can be used in multiple scenarios, i.e. both the parameters and datasets can be changed to suit experiments of different researchers.
 - Documentation
-  - At least one domain scientist who was not involved in the development of the virtual lab has reviewed the user manual. 
+  -[ ] There is a user manual and at least one domain scientist who was not involved in the development of the virtual lab has reviewed the user manual. 
 The coding experience of the reviewer of the user manual is similar to the coding experience of the intended user.
-  - How to use the virtual lab on a different scenario is explained.
+  -[ ] How to use the virtual lab on a different scenario is explained.
 - Codebase
-  - Unit tests verify the behavior of used methods and libraries. There should be a testing guideline, which will be done in this issue [\#274](https://github.com/QCDIS/projects_overview/issues/274).
-  - The virtual lab reads, writes and exchanges data in a way that meets domain-relevant community standards. Recommendations for what standards to use are under investigation, see github issue [#281](https://github.com/QCDIS/projects_overview/issues/281).                                                                                                                                                                                                                                                                                                         
-  - The code within cells is easily human-readable and others can easily modify it. If methods have side effects, this is clear to the user.
-  - The input and output of each cell is clear. It is both clear what the structure is (e.g. what data type is used) and what the data content is from a domain perspective.
+  -[ ]  Unit tests verify the behavior of used methods and libraries. There should be a testing guideline, which will be done in this issue [\#274](https://github.com/QCDIS/projects_overview/issues/274).
+  -[ ]  The virtual lab reads, writes and exchanges data in a way that meets domain-relevant community standards. Recommendations for what standards to use are under investigation, see github issue [#281](https://github.com/QCDIS/projects_overview/issues/281).                                                                                                                                                                                                                                                                                                         
+  -[ ]  The code within cells is easily human-readable and others can easily modify it. If methods have side effects, this is clear to the user.
+  -[ ]  The input and output of each cell is clear. It is both clear what the structure is (e.g. what data type is used) and what the data content is from a domain perspective.
 - Workflow
-  - The duration of computation, memory usage, and power usage of the container is acceptable. As there is currently no dashboard to monitor resource usage, contact the VLIC team for guidelines.
+  -[ ]  The duration of computation, memory usage, and power usage of the containers is acceptable. As there is currently no dashboard to monitor resource usage, contact the VLIC team for guidelines.
 - Infrastructure
-  - The infrastructure requirements for the workshop are known and the necessary infrastructure has been provided:
-    - The number of people taking part in a workshop.
-    - The random access memory and permanent storage usage of the virtual lab are known. 
-    - The amount of processors the virtual lab uses is known.
+  -[ ]  The infrastructure requirements for the workshop are known and the necessary infrastructure has been provided:
+    -[ ]  The number of people taking part in a workshop.
+    -[ ]  The random access memory and permanent storage usage of the virtual lab are known. 
+    -[ ]  The amount of processors the virtual lab uses is known.
 
 ### During workshop use
 The following should be done during workshop use:
@@ -211,9 +217,11 @@ Has been involved as VRE DevOps engineer during the previous stages.
 
 ### From workshop use to operational service
 The virtual lab is an operational service if all previous criteria apply and additionally the following criteria apply:
-- Dependencies are specified. The dependencies are in the dockerfile of the virtual lab, 
+- Dependencies
+  - [ ] Dependencies are specified. The dependencies are in the dockerfile of the virtual lab, 
 but should be duplicated in the metadata such that a person can in theory also run the source code on their own machine after installing the dependencies manually.
-- Deploy the virtual lab on MyLifeWatch.
+- Deployment
+  - [ ] Deploy the virtual lab on MyLifeWatch.
 
 ### During operational service
 The following should be done during operational service:
@@ -234,7 +242,6 @@ The following responsibilities should be assigned when the virtual lab is an ope
 - Virtual lab service operator: Is the primary point of contact in case any problems arise with the virtual lab.
 - Virtual lab technical coordinator: Ensures the VRE keeps supporting the virtual lab.
 
-![ NaaVRE_development_cycle.png not found](images/NaaVRE_development_cycle.png)  
 Figure1: The virtual lab moves through the readiness levels, from core development to operational service. Users coming up with ideas for new experiments that do not fit in the virtual lab, 
 can in collaboration with LifeWatch create a new virtual lab that fits their needs.
 
