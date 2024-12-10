@@ -78,13 +78,13 @@ Figure1: The virtual lab moves through the readiness levels, from conceptual pro
 Users coming up with ideas for new experiments that can not be done in the existing virtual labs, 
 can, in collaboration with LifeWatch, create a new virtual lab that fits their needs.
 
-### L0 - Conceptual proposal
+## L0 - Conceptual proposal
 The idea of a new virtual lab is spawned by a domain scientist. They pitch the idea to the NaaVRE DevOps team. 
 If a NaaVRE virtual lab seems the best platform to conduct the research,
 the domain scientist and NaaVRE DevOps team work out the idea further, recruit a team of core developers, 
 and establish a timeline for the virtual lab. 
 
-#### During the conceptual proposal phase 
+### During the conceptual proposal phase 
 The following things should be done to work out the conceptual proposal to a concrete virtual lab:
 - Feasibility
   - Checking if the idea is feasible to be done in NaaVRE.
@@ -102,17 +102,19 @@ you can pick another license. We recommend having a look at https://choosealicen
   - Storage of the codebase on a repository with version control (e.g. git).
 - Documentation
   - Picking a nice name for your virtual lab. Make sure the name won't be mixed up with other virtual labs.
-  - Publishing virtual lab metadata outside the virtual lab. This will allow others to be aware of the context of the virtual lab from an early stage.
-    - Tracking the metadata with version control, such that the changes to metadata can be viewed by virtual lab users.
-    - Currently, we are choosing a default metadata catalogue. For progress, see issue [#275](https://github.com/QCDIS/projects_overview/issues/275).
 
-#### Conceptual proposal responsibilities
+### Conceptual proposal responsibilities
 The following roles are involved in a conceptual proposal:
 - Virtual lab owner / Principal investigator: Comes with a use case that will serve as the first application of the virtual lab.
 Recruits a core development team.
 - VRE DevOps engineer: Establish if NaaVRE can support to use case. Create an empty new virtual lab.
 
-#### From conceptual proposal to co-development
+### Conceptual proposal milestones
+The following milestones can be achieved during the phase L0 of virtual lab development:
+- The core development team becomes complete.
+- The creation of a new empty virtual lab.
+
+### From conceptual proposal to co-development
 To transition from conceptual proposal to co-development the following should be done:
 - Timeline
   -[ ] A timeline exists for the co-development, validation of the virtual lab and development of training material.
@@ -126,8 +128,6 @@ To transition from conceptual proposal to co-development the following should be
   -[ ] The virtual lab has a license.
 - Documentation
   -[ ] The virtual lab has a nice name.
-  -[ ] The virtual lab metadata is available outside the virtual lab.
-    -[ ] Metadata is tracked by version control.
 
 ## L1 - Co-development
 
@@ -142,6 +142,9 @@ Where possible, do the following while building the virtual lab:
 - Parallelization
   - Parallelize the execution of the parts of the code where this is useful. A tutorial is available [here](https://github.com/QCDIS/lifewatch-notebooks/blob/main/NaaVRE-tutorials/splitting-classic.ipynb).
 - Documentation
+  - Publish virtual lab metadata outside the virtual lab. This will allow others to be aware of the context of the virtual lab from an early stage.
+    - Track the metadata with version control, such that the changes to metadata can be viewed by virtual lab users.
+    - Currently, we are choosing a default metadata catalogue. For progress, see issue [#275](https://github.com/QCDIS/projects_overview/issues/275).
   - Create a directory for documentation of the virtual lab.
     - Track the documentation with version control.
   - Start each cell in a notebook with a title.
@@ -156,11 +159,16 @@ source code and other assets. We recommend starting with reviews early on in the
 by giving the core development team advice and changing the virtual research environment where necessary.
 
 #### Co-development milestone
-The milestone to reach during co-development is a demonstration of a running the workflow in the virtual lab.
+Two milestones should be reached during co-development:
+- The publication of the metadata.
+- A demonstration of a running the workflow in the virtual lab.
 
 ### From co-development to the validation phase
 To transition from co-development to the validation phase, a usability study should be done. 
 The usability study should consider at least the following criteria:
+- Documentation
+  -[ ] The virtual lab metadata is available outside the virtual lab.
+    -[ ] Metadata is tracked by version control.
 - Security
   -[ ] Personal tokens are not tracked by version control.
 - Versioning
@@ -199,7 +207,7 @@ Besides running scenarios in the virtual lab, the following should be done per c
   - Define clear responsibilities of all notebook cells, methods and classes.
 
 ### Validation phase milestones
-Two papers should be published:
+The publication of one or two papers:
 1. A paper in the ecosystem domain presenting the scenarios run in the virtual lab.
 2. A technical paper.  
 
