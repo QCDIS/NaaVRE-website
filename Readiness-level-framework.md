@@ -58,8 +58,7 @@ For each higher readiness level improvements are be made to the assets and docum
 with an increasing amount of independence from the virtual lab core developers and VRE DevOps team.
 
 - L0 - Conceptual proposal: A researcher pitches an idea to the NaaVRE DevOps team. Plans are made to create a virtual lab.  
-- L1 - Co-development:  Co-development is the initial phase where all virtual labs start off. This is the beginning of the 
-development of new data processing, data analysis, or simulation tools or the conversion of legacy code from a different platform to NaaVRE. 
+- L1 - Co-development: This is the beginning of the development of new data processing, data analysis, or simulation tools or the conversion of legacy code from a different platform to NaaVRE. 
 - L2 - Validation: The virtual lab owner uses the virtual lab to run their scenarios. 
 - L3 - Workshop use: The lab can be used by multiple workshop, training, and hackathon participants under the guidance of the virtual lab trainer. 
 - L4 - Operational service: The virtual lab is ready for all scientists to create their own instance of the lab for their research.
@@ -85,24 +84,55 @@ If a NaaVRE virtual lab seems the best platform to conduct the research,
 the domain scientist and NaaVRE DevOps team work out the idea further, recruit a team of core developers, 
 and establish a timeline for the virtual lab. 
 
-### From conceptual proposal to co-development
-We recommend to start the development of a new virtual lab by doing the following:
-- Version control
-  - Store the codebase on a repository with version control (e.g. git).
-- Security
-  - Make sure personal tokens for APIs do not end up in version control. ToDo VLIC: Guideline for secret management [#276](https://github.com/QCDIS/projects_overview/issues/276).
+### During the conceptual proposal phase 
+The following things should be done to work out the conceptual proposal to a concrete virtual lab:
+- Feasibility
+  - Checking if the idea is feasible to be done in NaaVRE.
+- Team recruitment
+  - Finding a team of core developers to build the virtual lab. 
+- Timeline
+  - Making a timeline for the co-development, validation of the virtual lab and development of training material.
 - Licensing
-  - Choose a license for the virtual lab. We recommend using the [Apache license 2.0](https://choosealicense.com/licenses/apache-2.0/), 
+  - Choosing a license for the virtual lab. We recommend using the [Apache license 2.0](https://choosealicense.com/licenses/apache-2.0/), 
 assuming this is compatible with the other packages and software you use in the virtual lab. If the Apache License 2.0 is incompatible with software or libraries used, 
 you can pick another license. We recommend having a look at https://choosealicense.com/.
+- Codebase
+  - Creation of a new virtual lab.
+- Version control
+  - Storage of the codebase on a repository with version control (e.g. git).
 - Documentation
-  - Pick a nice name for your virtual lab. Make sure the name won't be mixed up with other virtual labs.
-  - Publish virtual lab metadata outside the virtual lab. This will allow others to be aware of the context of the virtual lab from an early stage.
-    - Track the metadata with version control, such that the changes to metadata can be viewed by virtual lab users.
+  - Picking a nice name for your virtual lab. Make sure the name won't be mixed up with other virtual labs.
+  - Publishing virtual lab metadata outside the virtual lab. This will allow others to be aware of the context of the virtual lab from an early stage.
+    - Tracking the metadata with version control, such that the changes to metadata can be viewed by virtual lab users.
     - Currently, we are choosing a default metadata catalogue. For progress, see issue [#275](https://github.com/QCDIS/projects_overview/issues/275).
- 
-### During  co-development
+
+### Conceptual proposal responsibilities
+The following roles are involved in a conceptual proposal:
+- Virtual lab owner / Principal investigator: Comes with a use case that will serve as the first application of the virtual lab.
+Recruits a core development team.
+- VRE DevOps engineer: Establish if NaaVRE can support to use case. Create an empty new virtual lab.
+
+### From conceptual proposal to co-development
+To transition from conceptual proposal to co-development the following should be done:
+- Timeline
+  -[ ] A timeline exists for the co-development, validation of the virtual lab and development of training material.
+- Codebase
+  -[ ] A new virtual lab is created.
+- Version control
+  -[ ] The codebase repository has version control (e.g. git).
+- Security
+  -[ ] Personal tokens for APIs do not end up in version control. ToDo VLIC: Guideline for secret management [#276](https://github.com/QCDIS/projects_overview/issues/276).
+- Licensing
+  -[ ] The virtual lab has a license.
+- Documentation
+  -[ ] The virtual lab has a nice name.
+  -[ ] The virtual lab metadata is available outside the virtual lab.
+    -[ ] Metadata is tracked by version control.
+
+### During co-development
 Where possible, do the following while building the virtual lab:
+- Security
+  - Make sure personal tokens for APIs do not end up in version control. ToDo VLIC: Guideline for secret management [#276](https://github.com/QCDIS/projects_overview/issues/276).
 - Versioning
   - Pin versions of used software and libraries in the dependencies to prevent compatibility problems when updates occur to the packages and software.
 - Data
@@ -116,8 +146,7 @@ Where possible, do the following while building the virtual lab:
 
 #### Co-development responsibilities
 The following roles should be assigned during co-development:
-- Virtual lab owner / Principal investigator: Provides the use case that will be the first application of the virtual lab. 
-Guides the development of the lab from the scientific viewpoint. 
+- Virtual lab owner / Principal investigator: Guides the development of the lab from the scientific viewpoint. 
 - Virtual lab core developers: One or multiple core developers create a new virtual lab in NaaVRE.
 - Virtual lab code reviewer: Provides feedback on the user-friendliness, maintainability, and robustness of the
 source code and other assets. We recommend starting with reviews early on in the development process, as this may contribute to a clear architecture, and good code quality.
@@ -132,12 +161,8 @@ To transition from co-development to the validation phase, a usability study sho
 The usability study should consider at least the following criteria:
 - Security
   -[ ] Personal tokens are not tracked by version control.
-- Licensing
-  -[ ] The virtual lab has a license.
 - Versioning
-  -[ ] Versions of used software and libraries are pinned. 
-- Metadata
-  -[ ] The metadata of the virtual lab is published.
+  -[ ] Versions of used software and libraries are pinned.
 - Codebase
   -[ ] The code executes without errors: The code can be executed without errors. 
 Currently, you can verify this by manually executing all cells in the notebook on a machine on which the code was not developed (to ensure no references are made to local resources).
