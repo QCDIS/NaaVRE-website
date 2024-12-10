@@ -36,7 +36,7 @@ one role for the virtual lab, while others might have multiple of the following 
   - Virtual lab owner / Principal investigator: Coordinates the development of the virtual lab with a scientific vision.
   This will often be the golden user, i.e. the person that provides the initial publishable use case of the virtual lab. 
   - Virtual lab core developers: Develop a new virtual lab in NaaVRE. Often the virtual lab owner will be one of the core developers. 
-  - Virtual lab code reviewers: Provide feedback during core development on the user-friendliness, maintainability, and robustness of the
+  - Virtual lab code reviewers: Provide feedback during co-development on the user-friendliness, maintainability, and robustness of the
   source code and other assets.
 - Virtual lab usage roles: Roles of people who use an existing virtual lab for their own research.
   - Virtual lab user: Researchers that couple virtual labs assets, and run their own scenarios in the virtual lab by using their own data and parameters.
@@ -57,23 +57,31 @@ We discern four readiness levels in the development of a virtual lab.
 For each higher readiness level improvements are be made to the assets and documents in order to make the lab usable by others 
 with an increasing amount of independence from the virtual lab core developers and VRE DevOps team.
 
-1. Core Development: Core development is the initial phase where all virtual labs start off. This is the beginning of the 
+1. Conceptual proposal: A researcher pitches an idea to the NaaVRE DevOps team. Plans are made to create a virtual lab.
+2. co-development:  Co-development is the initial phase where all virtual labs start off. This is the beginning of the 
 development of new data processing, data analysis, or simulation tools or the conversion of legacy code from a different platform to NaaVRE.
-2. First use: The virtual lab owner uses the virtual lab to run their scenarios.
-3. Workshop use: The lab can be used by multiple workshop participants under the guidance of the virtual lab trainer. 
+2. Validation: The virtual lab owner uses the virtual lab to run their scenarios.
+3. Workshop use: The lab can be used by multiple workshop, training, and hackathon participants under the guidance of the virtual lab trainer. 
 4. Operational service: The virtual lab is ready for all scientists to create their own instance of the lab for their research.
 
 The following table gives indications of the duration, number of developers and users involved per readiness level.
 
-| Readiness level     | Duration   | Developers                  | Users | Context dissemination | 
-|---------------------|------------|-----------------------------|-------|-----------------------|
-| Core development    | 3-6 months | the core development team   | 0     | Metadata publication  | 
-| First use           | 3 months   | the core development team   | 1     | Paper publication     |
-| Workshop use        | 3 months   | 10-25 workshop participants | 10-25 | Workshops             |
-| Operational service |            | 10 ≤ asset developers       | ≥ 10  |                       |
+|    | Name                | Duration    | Developers                   | Users | Context dissemination | 
+|----|---------------------|-------------|------------------------------|-------|-----------------------|
+| L0 | Conceptual proposal | 1-12 months | 0                            | 0     |                       |
+| L1 | Co-development      | 3-6 months  | The team of core developers  | 0     | Metadata publication  | 
+| L2 | Validation phase    | 3 months    | The team of core developers  | 1     | Paper publication     |
+| L3 | Workshop use        | 3 months    | 10-25 workshop participants  | 10-25 | Workshops             |
+| L4 | Operational service |             | 10 ≤ asset developers        | ≥ 10  |                       |
 
-### Starting core development
-We recommend to start the creation of a new virtual lab by doing the following:
+### As a conceptual proposal
+The idea of a new virtual lab is spawned by a domain scientist. They pitch the idea to the NaaVRE DevOps team. 
+If a NaaVRE virtual lab seems the best platform to conduct the research,
+the domain scientist and NaaVRE DevOps team work out the idea further, recruit a team of core developers, 
+and establish a timeline for the virtual lab. 
+
+### Starting co-development
+We recommend to start the development of a new virtual lab by doing the following:
 - Version control
   - Store the codebase on a repository with version control (e.g. git).
 - Security
@@ -88,7 +96,7 @@ you can pick another license. We recommend having a look at https://choosealicen
     - Track the metadata with version control, such that the changes to metadata can be viewed by virtual lab users.
     - Currently, we are choosing a default metadata catalogue. For progress, see issue [#275](https://github.com/QCDIS/projects_overview/issues/275).
  
-### During core development
+### During  co-development
 Where possible, do the following while building the virtual lab:
 - Versioning
   - Pin versions of used software and libraries in the dependencies to prevent compatibility problems when updates occur to the packages and software.
@@ -101,8 +109,8 @@ Where possible, do the following while building the virtual lab:
     - Track the documentation with version control.
   - Start each cell in a notebook with a title.
 
-#### Core development responsibilities
-The following roles should be assigned during core development:
+#### Co-development responsibilities
+The following roles should be assigned during co-development:
 - Virtual lab owner / Principal investigator: Provides the use case that will be the first application of the virtual lab. 
 Guides the development of the lab from the scientific viewpoint. 
 - Virtual lab core developers: One or multiple core developers create a new virtual lab in NaaVRE.
@@ -111,11 +119,11 @@ source code and other assets. We recommend starting with reviews early on in the
 - Virtual research environment (VRE) development and operations engineers: Support the creation of the new virtual lab 
 by giving the core development team advice and changing the virtual research environment where necessary.
 
-#### Core development milestone
-The milestone to reach during core development is a demonstration of a running the workflow in the virtual lab.
+#### Co-development milestone
+The milestone to reach during co-development is a demonstration of a running the workflow in the virtual lab.
 
-### From core development to first use
-To transition from core development to first use, a usability study should be done. 
+### From co-development to the validation phase
+To transition from co-development to the validation phase, a usability study should be done. 
 The usability study should consider at least the following criteria:
 - Security
   -[ ] Personal tokens are not tracked by version control.
@@ -135,8 +143,8 @@ Currently, you can verify this by manually executing all cells in the notebook o
 - Workflow execution
   -[ ] The containerized cells can run without any modifications.
 
-### During first use
-Besides running scenarios in the virtual lab, the following should be done per category during first use:
+### During the validation phase
+Besides running scenarios in the virtual lab, the following should be done per category during the validation phase:
 - Data
   - Make data fair.
   - Follow the community standards of the relevant domains for reading, writing and exchanging data. 
@@ -156,15 +164,15 @@ Besides running scenarios in the virtual lab, the following should be done per c
   - Add unit tests to verify the behavior of used methods and libraries.
   - Define clear responsibilities of all notebook cells, methods and classes.
 
-#### First use Milestones
+#### Validation phase milestones
 Two papers should be published:
 1. A paper in the ecosystem domain presenting the scenarios run in the virtual lab.
 2. A technical paper.  
 
 Additionally the virtual lab should be made publicly available.
 
-#### First use responsibilities
-The following roles should be assigned during first use:
+#### Validation phase responsibilities
+The following roles should be assigned during the validation phase:
 - Virtual lab owner / Principal investigator: Uses the virtual lab to do their research. Publishes a paper in the ecosystem domain.
 - Virtual lab core developers: Provide support to the virtual lab owner.
 - Networked infrastructures scientist: Publishes a technical paper.
@@ -172,8 +180,8 @@ The following roles should be assigned during first use:
 the virtual lab trainer tries out the virtual lab and makes suggestions. Helps the virtual lab owner identify issues arising when others start using the virtual lab.
 - VRE DevOps engineer: Support the core developers and golden user by providing advise and changing the virtual research environment where necessary.
 
-### From first use to workshop use
-The virtual lab can transition to workshop use, if it meets the criteria for first use, and additionally meets the following requirements:
+### From the validation phase to workshop use
+The virtual lab can transition to workshop use, if it meets the criteria for co-development, and additionally meets the following requirements:
 - Data
   - [ ] All input data of the lab is FAIR.
 - Metadata
@@ -242,8 +250,10 @@ The following responsibilities should be assigned when the virtual lab is an ope
 - Virtual lab service operator: Is the primary point of contact in case any problems arise with the virtual lab.
 - Virtual lab technical coordinator: Ensures the VRE keeps supporting the virtual lab.
 
-Figure1: The virtual lab moves through the readiness levels, from core development to operational service. Users coming up with ideas for new experiments that do not fit in the virtual lab, 
-can in collaboration with LifeWatch create a new virtual lab that fits their needs.
+![ NaaVRE_development_cycle.png not found](images/NaaVRE_development_cycle.drawio.png)   
+Figure1: The virtual lab moves through the readiness levels, from conceptual proposal to operational service. 
+Users coming up with ideas for new experiments that can not be done in the existing virtual labs, 
+can, in collaboration with LifeWatch, create a new virtual lab that fits their needs.
 
 ### User manual
 The following guidelines can be used to determine the completeness of a user manual.
