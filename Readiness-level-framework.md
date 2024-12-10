@@ -74,6 +74,11 @@ The following table gives indications of the duration, number of developers and 
 | L3 | Workshop use        | 3 months    | 10-25 workshop participants  | 10-25 | Workshops             |
 | L4 | Operational service |             | 10 ≤ asset developers        | ≥ 10  |                       |
 
+![ NaaVRE_development_cycle.png not found](images/NaaVRE_development_cycle.drawio.png)   
+Figure1: The virtual lab moves through the readiness levels, from conceptual proposal to operational service. 
+Users coming up with ideas for new experiments that can not be done in the existing virtual labs, 
+can, in collaboration with LifeWatch, create a new virtual lab that fits their needs.
+
 ### As a conceptual proposal
 The idea of a new virtual lab is spawned by a domain scientist. They pitch the idea to the NaaVRE DevOps team. 
 If a NaaVRE virtual lab seems the best platform to conduct the research,
@@ -249,11 +254,6 @@ The following responsibilities should be assigned when the virtual lab is an ope
 - Virtual lab owner / Principal investigator: Coordinates the further development of the virtual lab with a scientific vision. 
 - Virtual lab service operator: Is the primary point of contact in case any problems arise with the virtual lab.
 - Virtual lab technical coordinator: Ensures the VRE keeps supporting the virtual lab.
-
-![ NaaVRE_development_cycle.png not found](images/NaaVRE_development_cycle.drawio.png)   
-Figure1: The virtual lab moves through the readiness levels, from conceptual proposal to operational service. 
-Users coming up with ideas for new experiments that can not be done in the existing virtual labs, 
-can, in collaboration with LifeWatch, create a new virtual lab that fits their needs.
 
 ### User manual
 The following guidelines can be used to determine the completeness of a user manual.
