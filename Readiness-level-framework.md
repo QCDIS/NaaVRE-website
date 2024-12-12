@@ -1,9 +1,9 @@
-# Readiness level framework for virtual labs in NaaVRE
+# Readiness level framework for virtual labs on the NaaVRE platform
 
-Version 0.0.1
+Version 0.0.2
 
-NaaVRE facilitates data processing, data analysis, and simulation by enabling scientists to create their own virtual labs.
-A collaborative effort between ecosystem specialists, computational scientists, data scientists, and development and operations engineers 
+The NaaVRE platform facilitates data- and computing-centric research activities by enabling scientists to create customizable virtual labs for specific scientific purposes. 
+A collaborative effort between domain specialists,  computational scientists, data scientists, and development and operations engineers 
 ensures that virtual labs are optimized to support research effectively.
 Virtual labs evolve through distinct stages: Initially, development is the primary focus. As the lab matures, 
 it transitions to support a first user, and ultimately, multiple users can conduct experiments within the environment.  
@@ -14,7 +14,7 @@ This readiness level framework assists researchers in building virtual labs by:
 - Describing the progression of a virtual lab through readiness levels, highlighting requirements, milestones and responsibilities.
 
 ## Content of a virtual lab
-A virtual lab is a collection of items researchers need to conduct their experiments: 
+A virtual lab provides a collection of research tools and assets customized for a specific research need: 
 - Assets created in the virtual lab. 
 - Documents that support the usability of the virtual lab.
 
