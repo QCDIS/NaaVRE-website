@@ -174,10 +174,11 @@ The usability study should consider at least the following criteria:
 - Versioning
   -[ ] Versions of used software and libraries are pinned.
 - Codebase
-  -[ ] The code executes without errors: The code can be executed without errors. 
+  -[ ] The code executes without errors: The code can be executed without errors.
 Currently, you can verify this by manually executing all cells in the notebook on a machine on which the code was not developed (to ensure no references are made to local resources).
   -[ ] The responsibility of each cell in the notebook is clear and can be described in a single sentence.
-  -[ ] Parallel processing is applied where suitable.
+  -[ ] The coding style is consistent and follows a style guide e.g. For Python [PEP 8](https://peps.python.org/pep-0008/).
+  - [ ] Parallel processing is applied where suitable.
 - Containerization
   -[ ] The notebook cells can be containerized.
 - Workflow execution
@@ -312,6 +313,7 @@ The following guidelines can be used to determine the completeness of a user man
   - The tutorial can be done without supervision.
 - Known potential pitfalls in using the virtual lab are described.
 - There is a description of the standards used for data exchange with application programming interfaces and databases.
+- The intended audience is described. Recommended prior knowledge is listed.
 - Storage location 
   - Store the user manual for the virtual lab in the same git repository as the virtual lab assets.
   - The user manual will be made available on [NaaVRE.net](https://naavre.net/) and should be separated from the codebase.
