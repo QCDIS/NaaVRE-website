@@ -87,21 +87,21 @@ and establish a timeline for the virtual lab.
 ### During the conceptual proposal phase 
 The following things should be done to work out the conceptual proposal to a concrete virtual lab:
 - Feasibility
-  - Checking if the idea is feasible to be done in NaaVRE.
+  - Check if the idea research activity can be done in NaaVRE.
 - Team recruitment
-  - Finding a team of core developers to build the virtual lab. 
+  - Find a team of core developers to build the virtual lab. 
 - Timeline
-  - Making a timeline for the co-development, validation of the virtual lab and development of training material.
+  - Make a timeline for the co-development, validation of the virtual lab and development of training material.
 - Licensing
-  - Choosing a license for the virtual lab. We recommend using the [Apache license 2.0](https://choosealicense.com/licenses/apache-2.0/), 
+  - Choose a license for the virtual lab. We recommend using the [Apache license 2.0](https://choosealicense.com/licenses/apache-2.0/), 
 assuming this is compatible with the other packages and software you use in the virtual lab. If the Apache License 2.0 is incompatible with software or libraries used, 
 you can pick another license. We recommend having a look at https://choosealicense.com/.
 - Codebase
-  - Creation of a new virtual lab.
+  - Create a new virtual lab.
 - Version control
-  - Storage of the codebase on a repository with version control (e.g. git).
+  - Store of the codebase on a repository with version control (e.g. git).
 - Documentation
-  - Picking a nice name for your virtual lab. Make sure the name won't be mixed up with other virtual labs.
+  - Pick a nice name for your virtual lab. Make sure the name won't be mixed up with other virtual labs.
 
 ### Conceptual proposal responsibilities
 The following roles are involved in a conceptual proposal:
